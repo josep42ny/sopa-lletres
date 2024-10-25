@@ -107,7 +107,7 @@ Contingut de la pàgina:
 
 ## Aplicació jugador
 
-La **pàgina inicial** d’aquesta aplicació s’ha d’anomenar wordSearch.html 
+La **pàgina inicial(Toni)** d’aquesta aplicació s’ha d’anomenar wordSearch.html 
 
 Aquesta primera pàgina contindrà: 
 
@@ -116,13 +116,13 @@ Aquesta primera pàgina contindrà:
 - Una secció article que tindran accés a dos articles. Aquests dos articles han de ser dues notícies sobre l’aplicació amb un enllaç a una pàgina externa amb més informació.  
 - Peu de pàgina: Enllaç al teu instagram, al teu facebook, al teu twitter. La teva adreça de correu. Comú a totes les pàgines de l’administrador. 
 
-**Pàgina alta usuari:**
+**Pàgina alta usuari:(Josep)**
 
 - Menú primari i secundari definit més amunt (inici descripció pantalles aplicació jugador).  
 - Una taula per a que l’usuari pugui donar-se d’alta. nom usuari, contrasenya, nom, llinatges, correu electrònic, data naixement.   
 - Peu de pàgina
 
-**Pàgina del joc:**
+**Pàgina del joc:(Toni)**
 
 Contingut de la pàgina:
 
@@ -136,13 +136,13 @@ Contingut de la pàgina:
 - Caixa de text que informa del resultat.   
 - Peu de pàgina.  
 
-**Pàgina de consulta de punts:** 
+**Pàgina de consulta de punts:(Josep)** 
 
 - Menú primari i secundari definit més amunt (inici descripció pantalles aplicació jugador).  
 - Apareixerà una llista ordenada amb el nom de la sopa de lletres i els punts obtinguts per aquell usuari a la sopa de lletres  
 - Peu de pàgina. 
 
-**Pàgina d’ajuda:** 
+**Pàgina d’ajuda:(Toni)** 
 
 Contingut de la pàgina:
 
@@ -151,7 +151,7 @@ Contingut de la pàgina:
 - Un video (ara un video qualsevol del youtube). Més endavant un video fet teu explicant com funciona l’aplicació i penjat al youtube. Controls visibles i reproducció automàtica.  
 - Peu de pàgina. 
 
-### **Mapa**
+### **Mapa (Josep)**
 
 Contingut de la pàgina:
 
@@ -159,7 +159,7 @@ Contingut de la pàgina:
 - En aquest apartat tindrem un mapa amb les ubicacions dels usuaris que hagin jugat al nostre joc. En aquesta primera fase **únicament** pintarem un mapa de Google Maps amb la ubicació de l'institut centrada.  
 - Peu de pàgina. 
 
-### **Contacte**
+### **Contacte (Toni)**
 
 Contingut de la pàgina:
 
@@ -174,7 +174,7 @@ Contingut de la pàgina:
 * **birthday**: data de naixement de l'usuari (no obligatori)  
 * **message**: missatge que ens vulgui escriure l'usuari (obligatori)
 
-### **Configuració**
+### **Configuració (Josep)**
 
 Contingut de la pàgina:
 
@@ -182,7 +182,7 @@ Contingut de la pàgina:
 - La pàgina de configuració serà un apartat on el jugador triarà les opcions del joc. Podeu fer que de moment es pugui seleccionar: idioma de la web (català, castellà), colors de les taules de les sopes de lletres, color dels botons.   
 - El peu de pàgina.
 
-### **Altra**
+### **Altra (Toni)**
 
 Contingut de la pàgina:
 
@@ -191,7 +191,7 @@ Contingut de la pàgina:
 - En aquesta pàgina posau tres fotos. De moment posau tres fotos qualsevols. Hem d’imaginar que seran les fotos dels 3 jugadors amb més puntuació. Quan cliquin a cada una d’elles ha d’anar a la pàgina web del jugador. A aquesta pàgina web del jugador no l’heu de fer vosaltres. Heu d’imaginar que va a una pàgina web ja feta.    
 - Peu de pàgina. 
 
-### **Usuari 1 amb més puntuació, usuari 2 amb més puntuació, usuari3 amb més puntuació**
+### **Usuari 1 amb més puntuació, usuari 2 amb més puntuació, usuari3 amb més puntuació (Josep)**
 
 Són tres pàgines que seran accesibles des del menú secundari de l’aplicació de l’usuari (no de l’admin).  
 Aquestes 3 pàgines seran iguals tindran la mateixa estructura però distint contingut.   

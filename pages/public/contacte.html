@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Toni Riera & Josep Fortuny">
+    <meta name="description" content="Sopa de lletres">
+    <title>Sopa de lletres</title>
+    <link rel="icon" href="media/image/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <menu>
+            <li><a href="wordSearch.html">Retorn a Login</a></li>
+            <li><a href="alta-usuari.html">Donar-se de alta</a></li>
+            <li><a href="partida.html">Iniciar partida</a></li>
+            <li><a href="consulta-punts.html">La meva puntuació</a></li>
+            <li><a href="ajuda-usuari.html">Ajuda</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="contacte.html">Contacte</a></li>
+            <li><a href="configuracio.html">Configuració</a></li>
+            <li><a href="altra.html">Altra</a></li>
+        </menu>
+        <nav>
+            <h2>Millors jugadors</h2>
+            <ul>
+                <li>Top 1: "nom de usuari + a href del seu perfil"</li>
+                <li>Top 2: "nom de usuari + a href del seu perfil"</li>
+                <li>Top 3: "nom de usuari + a href del seu perfil"</li>
+            </ul>
+        </nav>
+        <br>
+        <form>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+            <br><br>
+            <label for="correu">Correu electrònic</label>
+            <input type="email" id="correu" name="correu" required>
+            <br><br>
+            <label for="motiu">Motiu del missatge</label>
+            <select id="motiu" name="motiu" required>
+                <option value="consulta">Consulta</option>
+                <option value="error">Error</option>
+                <option value="millora">Millora</option>
+                <option value="subscribe">Subscribe</option>
+            </select>
+            <br><br>
+            <label for="telefon">Telèfon</label>
+            <input type="tel" id="telefon" name="telefon" required>
+            <br><br>
+            <label for="d-naixement">Data de naixament (optcional)</label>
+            <input type="date" id="d-naixement" name="d-naixement">
+            <br><br>
+            <label for="missatge">Missatge:</label>
+            <br>
+            <textarea id="missatge" name="missatge" rows="20" cols="70" maxlength="1500" required>redacta la consulta, la posible millora, descriu l'error i com replicarlo..... </textarea>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

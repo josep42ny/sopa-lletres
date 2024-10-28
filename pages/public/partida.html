@@ -14,201 +14,189 @@
     <header>
         <nav>
             <ul>
-                <li>Menu Principal</li>
-                <li><a href="ajuda-usuari.html">Ajuda usuari</a></li>
-                <li><a href="alta-usuari.html">Alta usuari</a></li>
+                <li><a href="partida.html">Juga</a></li>
+                <li><a href="consulta-punts.html">Resultats per sopa de lletres</a></li>
                 <li><a href="altra.html">Altra</a></li>
-                <li><a href="configuracio.html">Configuració</a></li>
-                <li><a href="consulta-punts.html">Consulta puntuacions</a></li>
                 <li><a href="contacte.html">Contacte</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
-                <li><a href="partida.html">Partida</a></li>
+                <li><a href="configuracio.html">Configuració</a></li>
+                <li><a href="ajuda-usuari.html">Ajuda</a></li>
                 <li><a href="wordSearch.html">Inicia sesió</a></li>
+                <li><a href="alta-usuari.html">Crea una conta</a></li>
                 <li><a href="#">Tanca la sesió</a></li>
-                <ul>
-                    <li>Menu secundari</li>
-                    <li><a href="top-player-01.html">Jugador n1</a></li>
-                    <li><a href="top-player-02.html">Jugador n2</a></li>
-                    <li><a href="top-player-03.html">Jugador n3</a></li>
-                </ul>
-                </li>
             </ul>
         </nav>
+        <menu>
+            <li><a href="top-player-01.html">Jugador n1</a></li>
+            <li><a href="top-player-02.html">Jugador n2</a></li>
+            <li><a href="top-player-03.html">Jugador n3</a></li>
+        </menu>
     </header>
     <main>
-        <menu>
-            <li><a href="wordSearch.html">Retorn a Login</a></li>
-            <li><a href="alta-usuari.html">Donar-se de alta</a></li>
-            <li><a href="partida.html">Iniciar partida</a></li>
-            <li><a href="consulta-punts.html">La meva puntuació</a></li>
-            <li><a href="ajuda-usuari.html">Ajuda</a></li>
-            <li><a href="mapa.html">Mapa</a></li>
-            <li><a href="contacte.html">Contacte</a></li>
-            <li><a href="configuracio.html">Configuració</a></li>
-            <li><a href="altra.html">Altra</a></li>
-        </menu>
-        <nav>
-            <h2>Millors jugadors</h2>
-            <ul>
-                <li>Top 1: "nom de usuari + a href del seu perfil"</li>
-                <li>Top 2: "nom de usuari + a href del seu perfil"</li>
-                <li>Top 3: "nom de usuari + a href del seu perfil"</li>
-            </ul>
-        </nav>
-        <form>
-            <label for="llista-de-sopes">Triau la sopa de lletres que voleu completar</label>
+
+        <section>
+            <h1>Partida</h1>
+            <form action="#" method="post">
+                <label for="llista-de-sopes">Triau la sopa de lletres que voleu completar</label>
+                <br><br>
+                <select id="llista-de-sopes" name="llista-de-sopes">
+                    <option value="Sopa1">Sopa 1, dificultat: " "</option>
+                    <option value="Sopa2">Sopa 2, dificultat: " "</option>
+                    <option value="Sopa4">Sopa 4, dificultat: " "</option>
+                    <option value="Sopa6">Sopa 6, dificultat: " "</option>
+                    <option value="Sopa9">Sopa 9, dificultat: " "</option>
+                </select>
+                <br><br>
+                <button type="submit">Juga</button>
+            </form>
             <br><br>
-            <select id="llista-de-sopes" name="llista-de-sopes">
-                <option value="Sopa1">Sopa 1, dificultat: " "</option>
-                <option value="Sopa2">Sopa 2, dificultat: " "</option>
-                <option value="Sopa4">Sopa 4, dificultat: " "</option>
-                <option value="Sopa6">Sopa 6, dificultat: " "</option>
-                <option value="Sopa9">Sopa 9, dificultat: " "</option>
-            </select>
-            <br><br>
-            <button type="button">Juga</button>
-            <br><br>
-            <ul>
-                <li>Paraula1</li>
-                <li>Paraula2</li>
-                <li>Paraula3</li>
-                <li>Paraula4</li>
-                <li>Paraula5</li>
-                <li>Paraula6</li>
-                <li>Paraula7</li>
-                <li>Paraula8</li>
-                <li>Paraula9</li>
-                <li>Paraula10</li>
-            </ul>
-            <br><br>
-            <table>
-                <tr>
-                    <td>G</td>
-                    <td>J</td>
-                    <td>X</td>
-                    <td>K</td>
-                    <td>B</td>
-                    <td>Q</td>
-                    <td>M</td>
-                    <td>R</td>
-                    <td>P</td>
-                    <td>C</td>
-                </tr>
-                <tr>
-                    <td>F</td>
-                    <td>T</td>
-                    <td>Y</td>
-                    <td>E</td>
-                    <td>L</td>
-                    <td>A</td>
-                    <td>H</td>
-                    <td>V</td>
-                    <td>D</td>
-                    <td>Z</td>
-                </tr>
-                <tr>
-                    <td>N</td>
-                    <td>S</td>
-                    <td>W</td>
-                    <td>U</td>
-                    <td>O</td>
-                    <td>C</td>
-                    <td>K</td>
-                    <td>I</td>
-                    <td>P</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td>J</td>
-                    <td>M</td>
-                    <td>B</td>
-                    <td>R</td>
-                    <td>G</td>
-                    <td>T</td>
-                    <td>D</td>
-                    <td>Q</td>
-                    <td>F</td>
-                    <td>S</td>
-                </tr>
-                <tr>
-                    <td>H</td>
-                    <td>A</td>
-                    <td>L</td>
-                    <td>I</td>
-                    <td>C</td>
-                    <td>E</td>
-                    <td>V</td>
-                    <td>X</td>
-                    <td>Y</td>
-                    <td>O</td>
-                </tr>
-                <tr>
-                    <td>K</td>
-                    <td>Q</td>
-                    <td>F</td>
-                    <td>R</td>
-                    <td>P</td>
-                    <td>A</td>
-                    <td>B</td>
-                    <td>H</td>
-                    <td>U</td>
-                    <td>D</td>
-                </tr>
-                <tr>
-                    <td>T</td>
-                    <td>O</td>
-                    <td>J</td>
-                    <td>S</td>
-                    <td>X</td>
-                    <td>M</td>
-                    <td>Y</td>
-                    <td>K</td>
-                    <td>A</td>
-                    <td>N</td>
-                </tr>
-                <tr>
-                    <td>C</td>
-                    <td>E</td>
-                    <td>G</td>
-                    <td>U</td>
-                    <td>W</td>
-                    <td>T</td>
-                    <td>H</td>
-                    <td>Y</td>
-                    <td>D</td>
-                    <td>L</td>
-                </tr>
-                <tr>
-                    <td>P</td>
-                    <td>I</td>
-                    <td>M</td>
-                    <td>J</td>
-                    <td>A</td>
-                    <td>N</td>
-                    <td>F</td>
-                    <td>C</td>
-                    <td>O</td>
-                    <td>X</td>
-                </tr>
-                <tr>
-                    <td>V</td>
-                    <td>R</td>
-                    <td>J</td>
-                    <td>S</td>
-                    <td>L</td>
-                    <td>B</td>
-                    <td>G</td>
-                    <td>T</td>
-                    <td>N</td>
-                    <td>K</td>
-                </tr>
-            </table>
-            <br><br>
-            <button type="button">Finalitza</button>
-            <br><br>
-            <input type="text" name="timer" value="*contador*" disabled>
-            <input type="text" name="puntucaio" value="*puntuació*" disabled>
-        </form>
+        </section>
+
+        <section>
+            <form action="#" method="post">
+                <ul>
+                    <li>Paraula1</li>
+                    <li>Paraula2</li>
+                    <li>Paraula3</li>
+                    <li>Paraula4</li>
+                    <li>Paraula5</li>
+                    <li>Paraula6</li>
+                    <li>Paraula7</li>
+                    <li>Paraula8</li>
+                    <li>Paraula9</li>
+                    <li>Paraula10</li>
+                </ul>
+                <br><br>
+                <table>
+                    <tr>
+                        <td>G</td>
+                        <td>J</td>
+                        <td>X</td>
+                        <td>K</td>
+                        <td>B</td>
+                        <td>Q</td>
+                        <td>M</td>
+                        <td>R</td>
+                        <td>P</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>T</td>
+                        <td>Y</td>
+                        <td>E</td>
+                        <td>L</td>
+                        <td>A</td>
+                        <td>H</td>
+                        <td>V</td>
+                        <td>D</td>
+                        <td>Z</td>
+                    </tr>
+                    <tr>
+                        <td>N</td>
+                        <td>S</td>
+                        <td>W</td>
+                        <td>U</td>
+                        <td>O</td>
+                        <td>C</td>
+                        <td>K</td>
+                        <td>I</td>
+                        <td>P</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>J</td>
+                        <td>M</td>
+                        <td>B</td>
+                        <td>R</td>
+                        <td>G</td>
+                        <td>T</td>
+                        <td>D</td>
+                        <td>Q</td>
+                        <td>F</td>
+                        <td>S</td>
+                    </tr>
+                    <tr>
+                        <td>H</td>
+                        <td>A</td>
+                        <td>L</td>
+                        <td>I</td>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>V</td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>O</td>
+                    </tr>
+                    <tr>
+                        <td>K</td>
+                        <td>Q</td>
+                        <td>F</td>
+                        <td>R</td>
+                        <td>P</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>H</td>
+                        <td>U</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td>T</td>
+                        <td>O</td>
+                        <td>J</td>
+                        <td>S</td>
+                        <td>X</td>
+                        <td>M</td>
+                        <td>Y</td>
+                        <td>K</td>
+                        <td>A</td>
+                        <td>N</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>E</td>
+                        <td>G</td>
+                        <td>U</td>
+                        <td>W</td>
+                        <td>T</td>
+                        <td>H</td>
+                        <td>Y</td>
+                        <td>D</td>
+                        <td>L</td>
+                    </tr>
+                    <tr>
+                        <td>P</td>
+                        <td>I</td>
+                        <td>M</td>
+                        <td>J</td>
+                        <td>A</td>
+                        <td>N</td>
+                        <td>F</td>
+                        <td>C</td>
+                        <td>O</td>
+                        <td>X</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>R</td>
+                        <td>J</td>
+                        <td>S</td>
+                        <td>L</td>
+                        <td>B</td>
+                        <td>G</td>
+                        <td>T</td>
+                        <td>N</td>
+                        <td>K</td>
+                    </tr>
+                </table>
+                <br><br>
+                <button type="submit">Finalitza</button>
+                <br><br>
+                <input type="text" name="timer" value="*contador*" disabled>
+                <input type="text" name="puntucaio" value="*puntuació*" disabled>
+            </form>
+        </section>
+
     </main>
     <footer>
 

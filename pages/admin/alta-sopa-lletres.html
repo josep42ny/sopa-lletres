@@ -8,39 +8,50 @@
     <meta name="description" content="Sopa de lletres">
     <title>Sopa de lletres</title>
     <link rel="icon" href="media/image/favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"> -->
 </head>
 
 <body>
     <header>
-
+        <nav>
+            <ul>
+                <li>Usuari
+                    <ul>
+                        <li><a href="consulta-ranking-millors.html">Ranking usuairs</a></li>
+                        <li><a href="consulta-usuaris.html">Consulta usuaris</a></li>
+                        <li><a href="baixa-usuari.html">Baixa usuari</a></li>
+                    </ul>
+                </li>
+                <li>Sopa de lletres
+                    <ul>
+                        <li><a href="consulta-resultats.html">Resultats per sopa de lletres</a></li>
+                        <li><a href="consulta-sopa-lletres.html">Consulta sopa de lletres</a></li>
+                        <li><a href="alta-sopa-lletres.html">Alta sopa de lletres</a></li>
+                        <li><a href="baixa-sopa-lletres.html">Baixa sopa de lletres</a></li>
+                    </ul>
+                </li>
+                <li><a href="ajuda-admin.html">Ajuda</a></li>
+                <li><a href="admin_wordSearch.html">Inicia sesió</a></li>
+                <li><a href="#">Tanca la sesió</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <menu>
-            <li><a href="admin_wordSearch.html">Retorn a Login</a></li>
-            <li><a href="baixa-usuari.html">Baixa d'usuaris</a></li>
-            <li><a href="consulta-usuaris.html">Consulta d'usuairs</a></li>
-            <li><a href="alta-sopa-lletres.html">Alta de sopa de lletres</a></li>
-            <li><a href="baixa-sopa-lletres.html">Baixa de sopa de lletres</a></li>
-            <li><a href="consulta-sopa-lletres.html">Consulta de sopa de lletres</a></li>
-            <li><a href="consulta-resultats.html">Consulta de resultats sopa de lletres</a></li>
-            <li><a href="consulta-ranking-millors.html">Consulta de millors resultats</a></li>
-            <li><a href="ajuda-admin.html">Pàgina d'ajuda</a></li>
-        </menu>
-        
-        <form>
-            <label for="nom-sopa">Introduir el nom de la sopa de lletres</label>
-            <br>    
+
+        <section>
+            <h1>Crea una sopa de lletres</h1>
+            <form>
+                <label for="nom-sopa">Introduir el nom de la sopa de lletres</label>
+                <br>
                 <input type="text" id="nom-sopa" name="nom-sopa">
-            <br><br>
-            <label for="dificultat">Nivell de dificultat</label>
-            <br>
+                <br><br>
+                <label for="dificultat">Nivell de dificultat</label>
+                <br>
                 <input type="radio" id="dificultat" name="dificultat">Fàcil
                 <input type="radio" name="dificultat">Intermitg
                 <input type="radio" name="dificultat">Difícil
-            <br><br>
-            <label for="paraules">Insereix les paraules de la nova sopa de lletres</label>
-            <br>
+                <br><br>
+                <label for="paraules">Insereix les paraules de la nova sopa de lletres</label>
+                <br>
                 <input type="text" id="paraules" name="paraula1"><br>
                 <input type="text" name="paraula2"><br>
                 <input type="text" name="paraula3"><br>
@@ -51,9 +62,9 @@
                 <input type="text" name="paraula8"><br>
                 <input type="text" name="paraula9"><br>
                 <input type="text" name="paraula10">
-            <br><br>
-            <label for="lletres-abc">Sel·lecciona la lletra</label>
-            <br>
+                <br><br>
+                <label for="lletres-abc">Sel·lecciona la lletra</label>
+                <br>
                 <button type="button" id="lletres-abc">A</button>
                 <button type="button">B</button>
                 <button type="button">C</button>
@@ -81,136 +92,137 @@
                 <button type="button">X</button>
                 <button type="button">Y</button>
                 <button type="button">Z</button>
-        <br>
-        <table>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-        <br>
-            <label for="autoemplenar">Emplenar celdes en blanc</label>
-            <button type="button" id="autoemplenar">Emplenar</button>
-        <br>
-        <br>
-            <input type="reset" value="Reiniciar">
-        </form>
+                <br>
+                <table>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <br>
+                <label for="autoemplenar">Emplenar celdes en blanc</label>
+                <button type="button" id="autoemplenar">Emplenar</button>
+                <br>
+                <br>
+                <input type="reset" value="Reiniciar">
+            </form>
+        </section>
 
     </main>
     <footer>

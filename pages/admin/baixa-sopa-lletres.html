@@ -4,12 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Toni Riera & Josep Fortuny">
+    <meta name="description" content="Sopa de lletres">
     <title>Elimina sopes de lletres</title>
+    <link rel="icon" href="media/image/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
-
+        <nav>
+            <ul>
+                <li>Usuari
+                    <ul>
+                        <li><a href="consulta-ranking-millors.html">Ranking usuairs</a></li>
+                        <li><a href="consulta-usuaris.html">Consulta usuaris</a></li>
+                        <li><a href="baixa-usuari.html">Baixa usuari</a></li>
+                    </ul>
+                </li>
+                <li>Sopa de lletres
+                    <ul>
+                        <li><a href="consulta-resultats.html">Resultats per sopa de lletres</a></li>
+                        <li><a href="consulta-sopa-lletres.html">Consulta sopa de lletres</a></li>
+                        <li><a href="alta-sopa-lletres.html">Alta sopa de lletres</a></li>
+                        <li><a href="baixa-sopa-lletres.html">Baixa sopa de lletres</a></li>
+                    </ul>
+                </li>
+                <li><a href="ajuda-admin.html">Ajuda</a></li>
+                <li><a href="admin_wordSearch.html">Inicia sesió</a></li>
+                <li><a href="#">Tanca la sesió</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
 
@@ -23,15 +47,15 @@
         <section>
             <h2>Sopes que eliminar</h2>
             <form action="#" method="post">
-                <label>Sopa de països <input type="checkbox" name="removeSoup" value="facil"></label>
+                <label>Sopa de països <input type="checkbox" name="removeSoup" value="countries"></label>
                 <br>
-                <label>Sopa d'animals <input type="checkbox" name="removeSoup" value="intermitja"></label>
+                <label>Sopa d'animals <input type="checkbox" name="removeSoup" value="animals"></label>
                 <br>
-                <label>Sopa de llibres <input type="checkbox" name="removeSoup" value="dificil"></label>
+                <label>Sopa de llibres <input type="checkbox" name="removeSoup" value="books"></label>
                 <br>
-                <label>Sopa de vacançes <input type="checkbox" name="removeSoup" value="dificil"></label>
+                <label>Sopa de vacançes <input type="checkbox" name="removeSoup" value="holiday"></label>
                 <br>
-                <label>Sopa de programació <input type="checkbox" name="removeSoup" value="dificil"></label>
+                <label>Sopa de programació <input type="checkbox" name="removeSoup" value="coding"></label>
                 <br>
                 <button type="submit">Elimina</button>
             </form>

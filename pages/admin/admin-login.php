@@ -1,14 +1,14 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $userName = $_GET["userName"];
-    echo "El nom introduït és: " . $userName;
+    $userName = $_POST["userName"];
+    echo "El nom introduït és: " . $userName . "<br>";
 
-    $password = $_GET["password"];
-    echo "La contrassenya introduïda és: " . $password;
+    $password = $_POST["password"];
+    echo "La contrassenya introduïda és: " . $password . "<br>";
 
-    $repeatPassword = $_GET["repeatPassword"];
-    echo "La contrassenya repetida és: " . $repeatPassword;
+    $repeatPassword = $_POST["repeatPassword"];
+    echo "La contrassenya repetida és: " . $repeatPassword . "<br>";
     
 }
 ?>

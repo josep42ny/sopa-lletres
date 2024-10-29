@@ -39,7 +39,7 @@
 
         <section>
             <h1>Contacte</h1>
-            <form action="contacte_processar_info.php">
+            <form action="contacte_processar_info.php" method="post">
                 <label for="nom">Nom:</label>
                 <input type="text" id="nom" name="nom" required>
                 <br><br>
@@ -63,8 +63,10 @@
                 <br><br>
                 <label for="missatge">Missatge:</label>
                 <br>
-                <textarea id="missatge" name="missatge" rows="20" cols="70" maxlength="1500"
-                    required>redacta la consulta, la posible millora, descriu l'error i com replicarlo..... </textarea>
+                <textarea id="missatge" name="missatge" rows="20" cols="70" maxlength="1500" required
+                    placeholder="Redacta la consulta, la posible millora, descriu l'error i com replicarlo..... "></textarea>
+                <br>
+                <button type="submit">Envia missatge</button>
             </form>
         </section>
 

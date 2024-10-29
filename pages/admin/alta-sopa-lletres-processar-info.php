@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $paraula8 = $_POST["paraula8"];
     $paraula9 = $_POST["paraula9"];
     $paraula10 = $_POST["paraula10"];
-    echo "Les paraules son: " . $paraula1 . $paraula2 . $paraula3 . $paraula4 . $paraula5 . $paraula6 . $paraula7 . $paraula8 . $paraula9 . $paraula10;
+    echo "Les paraules son: " . " " . $paraula1 . " " . $paraula2 . " " . $paraula3 . " " . $paraula4 . " " . $paraula5 . " " . $paraula6 . " " . $paraula7 . " " . $paraula8 . " " . $paraula9 . " " . $paraula10;
 
 }
 ?>

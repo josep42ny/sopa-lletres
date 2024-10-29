@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dificultat1 = $_POST["dificultat"];
     echo "dificultat sel·leccionada és: " . $dificultat1;
 
-    echo "<br>"
+    echo "<br>";
 
     $paraula1 = $_POST["paraula1"];
     $paraula2 = $_POST["paraula2"];

@@ -7,6 +7,7 @@
     <meta name="author" content="Toni Riera & Josep Fortuny">
     <meta name="description" content="Sopa de lletres">
     <title>Sopa de lletres</title>
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
 </head>
 
@@ -38,10 +39,11 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="Admin">
 
         <section>
             <h1>Crea una sopa de lletres</h1>
+            <div class="forms">
             <form action="alta-sopa-lletres.php" method="post">
                 <label for="nom-sopa">Introduir el nom de la sopa de lletres</label>
                 <br>
@@ -232,10 +234,12 @@
                 <input type="submit" value="Desa">
                 <input type="reset" value="Reiniciar">
             </form>
+        </div>
         </section>
 
     </main>
     <footer>
+    <div>
         <h2>Josep Fortuny</h2>
         <ul>
             <li><a href="https://example.com/"><img src="../../media/image/facebook-icon.svg" alt="facebook"
@@ -246,6 +250,8 @@
                         width="20">@exemple</a></li>
             <li><a href="mailto:email@example.com">email@example.com</a></li>
         </ul>
+    </div>
+    <div>
         <h2>Toni Riera</h2>
         <ul>
             <li><a href="https://example.com/"><img src="../../media/image/facebook-icon.svg" alt="facebook"
@@ -256,6 +262,7 @@
                         width="20">@exemple</a></li>
             <li><a href="mailto:email@example.com">email@example.com</a></li>
         </ul>
+    </div>
         <p>
             Pàgina feta per Toni Riera i Josep Fortuny. 2024
         </p>

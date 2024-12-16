@@ -32,6 +32,16 @@ select {
     font: inherit;
 }
 
+.Admin p {
+    color: var(--tx-color);
+    padding: 0.1rem;
+}
+
+.Admin h1 {
+    padding: 0.1rem;
+    color: var(--header-color);
+} 
+
 /*CSS per footer*/
 
 footer {
@@ -75,15 +85,41 @@ footer ul li a img {
 
 /*links*/
 
+a:visited, 
+a:active, 
+a:link {
+    color: var(--tertiary-color);
+}
+
 a:hover {
     color: var(--highlight-color);
 }
 
-a:visited, a:active {
-    color: var(--tertiary-color);
+/*fi links*/
+
+/*Formularis (general?)*/
+
+.forms {
+    background-color: var(--secondary-color);
 }
 
-/*fi links*/
+legend {
+    color: var(--tx-color);
+}
+
+label {
+    color: var(--tx-color);
+}
+
+input {
+    padding: 0.2em;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    background-color: var(--bg-color);
+    border-color: var(--border-color);
+}
+
+/*Fi formulari*/
 
 /*Paleta colores view*/
 

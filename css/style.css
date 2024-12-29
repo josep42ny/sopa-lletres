@@ -1,6 +1,7 @@
-@import url(theme.css);
+@import url(color.css);
 @import url(typography.css);
 @import url(spacing.css);
+@import url(forms.css);
 
 /* Reset CSS */
 *,
@@ -19,62 +20,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.65;
     background-color: var(--bg-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: "Fira Sans", sans-serif;
-    color: var(--header-color);
-    line-height: 1.15;
-    font-weight: 400;
-}
-
-h1 {
-    font-weight: 600;
-    font-size: var(--text-xxl);
-    margin-bottom: var(--space-md);
-}
-
-h2 {
-    font-size: var(--text-xl);
-    margin-bottom: var(--space-xs);
-}
-
-h3 {
-    font-size: var(--text-lg);
-}
-
-h4 {
-    font-size: var(--text-md);
-}
-
-h5 {
-    font-size: var(--text-md);
-}
-
-p {
-    font-size: var(--text-base-size);
-    margin-bottom: var(--space-lg);
-}
-
-small {
-    font-size: var(--text-sm);
-}
-
-label {
-    font-weight: 500;
-}
-
-body {
-    line-height: 1.5;
-    background-color: var(--bg-color);
-    -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -103,91 +49,15 @@ main>* {
     margin: 0 auto;
 }
 
-main strong {
-    padding: 0.1rem;
-    color: var(--header-color);
-    font-weight: bold;
-}
-
-main h1 {
-    padding: 0.1rem;
-    color: var(--header-color);
-}
-
 .iframe {
     text-align: center;
 }
 
-/*CSS per footer*/
-
-footer {
-    text-align: center;
-    color: var(--tx-color);
-}
-
-footer div {
-    display: inline-block;
-    padding-left: 1.2rem;
-    padding-bottom: 1.2rem;
-    padding-top: 1.2rem;
-    width: 26%;
-}
-
-footer ul {
-    padding-left: 30px;
-    width: 90%;
-    list-style-position: outside;
-}
-
-footer ul li {
-    text-align: start;
-    line-height: 1.5;
-    list-style-position: outside;
-}
-
-footer li a {
-    display: inline;
-    vertical-align: middle;
-}
-
-footer ul li a img {
-    display: inline;
-    vertical-align: middle;
-    margin-right: 0.5rem;
-    width: 20px;
-    height: auto;
-}
-
-/*Fi CSS per footer*/
-
-/*links*/
-
-a:visited,
-a:active,
-a:link {
-    color: var(--tertiary-color);
-}
-
-a:hover {
-    color: var(--highlight-color);
-}
-
-/*fi links*/
-
 /*Formularis (general?)*/
-
 
 /* aplicar class="form-container" + "form" de en Josep */
 .forms {
     background-color: var(--secondary-color);
-}
-
-legend {
-    color: var(--tx-color);
-}
-
-label {
-    color: var(--tx-color);
 }
 
 input {
@@ -203,55 +73,6 @@ input[type=radio] {
 }
 
 /*Fi formulari*/
-
-/*Paleta colores view*/
-
-.col1 {
-    width: 500px;
-    height: 50px;
-    background-color: var(--bg-color);
-}
-
-.col2 {
-    width: 500px;
-    height: 50px;
-    background-color: var(--highlight-color);
-}
-
-.col3 {
-    width: 500px;
-    height: 50px;
-    background-color: var(--secondary-color);
-}
-
-.col4 {
-    width: 500px;
-    height: 50px;
-    background-color: var(--tertiary-color);
-}
-
-.col5 {
-    color: white;
-    width: 500px;
-    height: 50px;
-    background-color: var(--border-color);
-}
-
-.col6 {
-    color: white;
-    width: 500px;
-    height: 50px;
-    background-color: var(--header-color);
-}
-
-.col7 {
-    color: white;
-    width: 500px;
-    height: 50px;
-    background-color: var(--tx-color);
-}
-
-/*Fi paleta colores view*/
 
 button {
     background-color: var(--highlight-color);

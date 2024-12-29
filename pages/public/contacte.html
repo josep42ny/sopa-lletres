@@ -42,31 +42,24 @@
             <h1>Contacte</h1>
             <form action="contacte-processar-info.php" method="post">
                 <label for="nom">Nom:</label>
-                <input type="text" id="nom" name="nom" required>
-                <br><br>
+                <input required type="text" id="nom" name="nom">
                 <label for="correu">Correu electrònic</label>
-                <input type="email" id="correu" name="correu" required>
-                <br><br>
+                <input required type="email" id="correu" name="correu" placeholder="correu@exemple.cat">
                 <label for="motiu">Motiu del missatge</label>
-                <select id="motiu" name="motiu" required>
+                <select required id="motiu" name="motiu">
                     <option value="">--</option>
                     <option value="consulta">Consulta</option>
                     <option value="error">Error</option>
                     <option value="millora">Millora</option>
-                    <option value="subscribe">Subscribe</option>
+                    <option value="subscribe">Subscripció</option>
                 </select>
-                <br><br>
                 <label for="telefon">Telèfon</label>
-                <input type="tel" id="telefon" name="telefon" required>
-                <br><br>
+                <input required type="tel" id="telefon" name="telefon">
                 <label for="d-naixement">Data de naixament (optcional)</label>
                 <input type="date" id="d-naixement" name="d-naixement">
-                <br><br>
                 <label for="missatge">Missatge:</label>
-                <br>
-                <textarea id="missatge" name="missatge" rows="20" cols="70" maxlength="1500" required
+                <textarea required id="missatge" name="missatge" rows="20" cols="70" maxlength="1500"
                     placeholder="Redacta la consulta, la posible millora, descriu l'error i com replicarlo..... "></textarea>
-                <br>
                 <button type="submit">Envia missatge</button>
             </form>
         </section>

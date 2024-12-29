@@ -132,42 +132,6 @@ table {
     max-width: fit-content;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid gray;
-}
-
-nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    width: 8rem;
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--header-color);
-}
-
-nav a:hover {
-    border-bottom: 4px solid var(--highlight-color);
-    color: var(--highlight-color);
-    translate: 0 2px;
-    fill: #fff12a;
-}
-
-header>a {
-    display: block;
-    width: fit-content;
-    margin: 1rem auto;
-}
-
-header>a img {
-    width: 200px;
-}
-
 section {
     padding: 80px;
 }

@@ -82,8 +82,7 @@ label {
 
 /* Links */
 a:visited,
-a:active,
-a:link {
+a:active {
     color: var(--tertiary-color);
 }
 

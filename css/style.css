@@ -41,17 +41,12 @@ select {
     font: inherit;
 }
 
-main {
-    color: var(--tx-color);
-    padding: 0.1rem;
-}
-
 main>* {
     width: 40%;
     margin: 0 auto;
 }
 
-.iframe {
+.center-text {
     text-align: center;
 }
 

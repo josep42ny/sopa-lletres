@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Toni Riera & Josep Fortuny">
+    <link rel="stylesheet" href="../../css/style.css">
     <meta name="description" content="Sopa de lletres">
     <title>Sopa de lletres</title>
     <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
@@ -18,47 +19,36 @@
         <nav>
             <ul>
                 <li><a href="partida.html">Juga</a></li>
-                <li><a href="consulta-punts.html">Resultats per sopa de lletres</a></li>
+                <li><a href="consulta-punts.html">Resultats</a></li>
                 <li><a href="altra.html">Altra</a></li>
                 <li><a href="contacte.html">Contacte</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
                 <li><a href="configuracio.html">Configuració</a></li>
                 <li><a href="ajuda-usuari.html">Ajuda</a></li>
                 <li><a href="wordSearch.html">Inicia sesió</a></li>
-                <li><a href="alta-usuari.html">Crea una conta</a></li>
-                <li><a href="#">Tanca la sesió</a></li>
-                <li>Top jugadors
-                    <ul>
-                        <li><a href="top-player-01.html">Jugador n1</a></li>
-                        <li><a href="top-player-02.html">Jugador n2</a></li>
-                        <li><a href="top-player-03.html">Jugador n3</a></li>
-                    </ul>
-                </li>
+                <li><a href="alta-usuari.html">Crea conta</a></li>
+                <li><a href="#">Tanca sesió</a></li>
+            </ul>
+            <ul>
+                <li><a href="top-player-01.html">Jugador n1</a></li>
+                <li><a href="top-player-02.html">Jugador n2</a></li>
+                <li><a href="top-player-03.html">Jugador n3</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
-        <section>
-            <h1>Inici de sessió</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laboriosam!
-            </p>
-
-            <form action="user-login.php" method="post">
-                <fieldset>
-                    <legend>Inicia sessió</legend>
+        <section class="login-section">
+            <div class="center login">
+                <h1>Hola de nou!</h1>
+                <form action="user-login.php" method="post">
                     <label for="userName">Usuari</label>
                     <input required type="text" name="userName" id="userName">
-                    <br>
                     <label for="password">Contrasenya</label>
-                    <input required type="password" name="password" id="password">
-                    <br>
-                    <label for="repeatPassword">Repeteix la contrasenya</label>
-                    <input required type="password" name="repeatPassword" id="repeatPassword">
-                </fieldset>
-                <button type="submit">Inicia sessió</button>
-            </form>
+                    <input required type="password" name="password" id="password" minlength="8">
+                    <button type="submit">Inicia sessió</button>
+                </form>
+            </div>
         </section>
 
         <section>

@@ -1,6 +1,11 @@
+header {
+    background-color: #ffeacf;
+    padding-top: 1em;
+}
+
 nav {
+    margin-top: 1em;
     text-align: center;
-    height: 60px;
 }
 
 /* Links del nav */
@@ -35,9 +40,9 @@ nav a:hover {
 header>a {
     display: block;
     width: fit-content;
-    margin: 1rem auto;
+    margin: 0 auto;
 }
 
 header>a img {
-    width: 200px;
+    width: 16em;
 }

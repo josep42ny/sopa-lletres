@@ -1,38 +1,30 @@
 /* Footer */
 footer {
+    background-color: #ffeacf;
     text-align: center;
     color: var(--tx-color);
+    padding: 5em 0 1em;
+    border-top: 2px solid var(--border-color);
 }
 
 footer div {
     display: inline-block;
-    padding-left: 1.2rem;
-    padding-bottom: 1.2rem;
-    padding-top: 1.2rem;
-    width: 26%;
+    text-align: start;
+    margin: 0 4em;
 }
 
 footer ul {
-    padding-left: 30px;
-    width: 90%;
-    list-style-position: outside;
+    list-style: none;
+    padding: 0;
 }
 
-footer ul li {
-    text-align: start;
-    line-height: 1.5;
-    list-style-position: outside;
-}
-
-footer li a {
-    display: inline;
-    vertical-align: middle;
-}
-
-footer ul li a img {
+footer ul img {
     display: inline;
     vertical-align: middle;
     margin-right: 0.5rem;
-    width: 20px;
-    height: auto;
+    width: 1.5em;
+}
+
+footer p {
+    margin: 5em 0 0;
 }

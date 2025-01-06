@@ -1,10 +1,19 @@
+section:has(form) {
+    max-width: 70ch;
+}
+
 form>* {
     display: block;
     width: 100%;
+
 }
 
 form *:not(label) {
     margin-bottom: var(--space-md);
+}
+
+form>button {
+    width: unset;
 }
 
 textarea {

@@ -5,15 +5,13 @@
 @import url(footer.css);
 @import url(forms.css);
 
-/* Reset CSS */
+/* ======= Configuracions inicials ======= */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-* {
     margin: 0;
+    padding: 0;
 }
 
 html {
@@ -25,6 +23,7 @@ body {
     background-color: var(--bg-color);
 }
 
+/* ======= Elements multimedia y de formularis ======= */
 img,
 picture,
 video,
@@ -34,6 +33,10 @@ svg {
     max-width: 100%;
 }
 
+iframe {
+    width: 100%;
+}
+
 input,
 button,
 textarea,
@@ -41,6 +44,7 @@ select {
     font: inherit;
 }
 
+/* ======= Disposició de les pàgines ======= */
 main {
     padding: 0 1em;
 }
@@ -52,14 +56,8 @@ main>* {
     margin: 4rem auto;
 }
 
-iframe {
-    width: 100%;
-}
 
-.center-text {
-    text-align: center;
-}
-
+/* ======= Botons generics ======= */
 button {
     background-color: var(--highlight-color);
     border: 1px solid var(--border-color);
@@ -80,6 +78,14 @@ button:active {
     box-shadow: 0px 0px var(--border-color);
 }
 
+/* ======= Taules ======= */
+table {
+    table-layout: fixed;
+    border: 4px solid var(--border-color);
+    border-collapse: collapse;
+    max-width: fit-content;
+}
+
 td {
     width: 50px;
     height: 50px;
@@ -87,6 +93,7 @@ td {
     font-size: 1.5rem;
     text-align: center;
     user-select: none;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 td:hover {
@@ -98,21 +105,16 @@ td:active {
     background-color: var(--tertiary-color);
 }
 
-table {
-    table-layout: fixed;
-    border: 4px solid var(--border-color);
-    border-collapse: collapse;
-    max-width: fit-content;
-}
-
-
-
+/* ======= Clases ======= */
 .center {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: var(--tertiary-color);
+}
+
+.center-text {
+    text-align: center;
 }

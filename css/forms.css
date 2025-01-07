@@ -21,3 +21,7 @@ textarea {
     min-height: 5em;
     resize: vertical;
 }
+
+fieldset {
+    padding: 0 1em;
+}

@@ -35,198 +35,196 @@
 
         <section>
             <h1>Crea una sopa de lletres</h1>
-            <div class="forms">
                 <form action="alta-sopa-lletres.php" method="post">
                     <label for="nom-sopa">Introduir el nom de la sopa de lletres</label>
-                    <br>
+                    
                     <input required type="text" id="nom-sopa" name="nom-sopa">
-                    <br><br>
+                    
                     <label for="dificultat">Nivell de dificultat</label>
-                    <br>
+                    
                     <label>
-                        <input required type="radio" id="dificultat" name="dificultat" value="easy">Fàcil
+                        <input required type="radio" id="dificultat" name="dificultat" value="easy"> Fàcil
                     </label>
                     <label>
-                        <input required type="radio" name="dificultat" value="normal">Intermitg
+                        <input required type="radio" name="dificultat" value="normal"> Intermitg
                     </label>
                     <label>
-                        <input required type="radio" name="dificultat" value="hard">Difícil
+                        <input required type="radio" name="dificultat" value="hard"> Difícil
                     </label>
-                    <br><br>
+                    
                     <label for="paraules">Insereix les paraules de la nova sopa de lletres</label>
-                    <br>
-                    <input required type="text" id="paraules" name="paraula1"><br>
-                    <input required type="text" name="paraula2"><br>
-                    <input required type="text" name="paraula3"><br>
-                    <input required type="text" name="paraula4"><br>
-                    <input required type="text" name="paraula5"><br>
-                    <input required type="text" name="paraula6"><br>
-                    <input required type="text" name="paraula7"><br>
-                    <input required type="text" name="paraula8"><br>
-                    <input required type="text" name="paraula9"><br>
+                    
+                    <input required type="text" id="paraules" name="paraula1">
+                    <input required type="text" name="paraula2">
+                    <input required type="text" name="paraula3">
+                    <input required type="text" name="paraula4">
+                    <input required type="text" name="paraula5">
+                    <input required type="text" name="paraula6">
+                    <input required type="text" name="paraula7">
+                    <input required type="text" name="paraula8">
+                    <input required type="text" name="paraula9">
                     <input required type="text" name="paraula10">
-                    <br><br>
+                    
                     <label for="lletres-abc">Sel·lecciona la lletra</label>
-                    <br>
-                    <button type="button" id="lletres-abc">A</button>
-                    <button type="button">B</button>
-                    <button type="button">C</button>
-                    <button type="button">Ç</button>
-                    <button type="button">D</button>
-                    <button type="button">E</button>
-                    <button type="button">F</button>
-                    <button type="button">G</button>
-                    <button type="button">H</button><br>
-                    <button type="button">I</button>
-                    <button type="button">J</button>
-                    <button type="button">K</button>
-                    <button type="button">L</button>
-                    <button type="button">M</button>
-                    <button type="button">N</button>
-                    <button type="button">O</button>
-                    <button type="button">P</button>
-                    <button type="button">Q</button><br>
-                    <button type="button">R</button>
-                    <button type="button">S</button>
-                    <button type="button">T</button>
-                    <button type="button">U</button>
-                    <button type="button">V</button>
-                    <button type="button">W</button>
-                    <button type="button">X</button>
-                    <button type="button">Y</button>
-                    <button type="button">Z</button>
-                    <br>
+                    
+                    <button type="button" class="plain small">A</button>
+                    <button type="button" class="plain small">B</button>
+                    <button type="button" class="plain small">C</button>
+                    <button type="button" class="plain small">Ç</button>
+                    <button type="button" class="plain small">D</button>
+                    <button type="button" class="plain small">E</button>
+                    <button type="button" class="plain small">F</button>
+                    <button type="button" class="plain small">G</button>
+                    <button type="button" class="plain small">H</button>
+                    <button type="button" class="plain small">I</button>
+                    <button type="button" class="plain small">J</button>
+                    <button type="button" class="plain small">K</button>
+                    <button type="button" class="plain small">L</button>
+                    <button type="button" class="plain small">M</button>
+                    <button type="button" class="plain small">N</button>
+                    <button type="button" class="plain small">O</button>
+                    <button type="button" class="plain small">P</button>
+                    <button type="button" class="plain small">Q</button>
+                    <button type="button" class="plain small">R</button>
+                    <button type="button" class="plain small">S</button>
+                    <button type="button" class="plain small">T</button>
+                    <button type="button" class="plain small">U</button>
+                    <button type="button" class="plain small">V</button>
+                    <button type="button" class="plain small">W</button>
+                    <button type="button" class="plain small">X</button>
+                    <button type="button" class="plain small">Y</button>
+                    <button type="button" class="plain small">Z</button>
+                    
+                    <div class="game-board">
                     <table>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     </table>
-                    <br>
-                    <label for="autoemplenar">Emplenar celdes en blanc</label>
+                </div>
                     <button type="button" id="autoemplenar">Emplenar</button>
-                    <br>
-                    <br>
-                    <input type="submit" value="Desa">
-                    <input type="reset" value="Reiniciar">
+                    
+                    
+                    <button type="submit">Desa</button>
+                    <button class="plain" type="reset">Reinicia</button>
                 </form>
-            </div>
         </section>
 
     </main>

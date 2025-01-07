@@ -5,7 +5,6 @@ section:has(form) {
 form>* {
     display: block;
     width: 100%;
-
 }
 
 form *:not(label) {
@@ -24,4 +23,13 @@ textarea {
 
 fieldset {
     padding: 0 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    padding: 0.25em 0.5em;
+    border-radius: 0.15em;
+    border: 1px solid gray;
 }

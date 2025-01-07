@@ -23,7 +23,7 @@ body {
     background-color: var(--bg-color);
 }
 
-/* ======= Elements multimedia y de formularis ======= */
+/* ======= Elements multimedia ======= */
 img,
 picture,
 video,
@@ -38,11 +38,9 @@ iframe {
     width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
-    font: inherit;
+iframe.map {
+    border: 2px solid var(--border-color);
+    border-radius: 0.25em;
 }
 
 /* ======= Disposició de les pàgines ======= */

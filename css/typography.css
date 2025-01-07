@@ -90,3 +90,10 @@ a:active {
 a:hover {
     color: rgb(1, 177, 190);
 }
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

@@ -79,32 +79,45 @@ button:active {
     box-shadow: 0px 0px var(--border-color);
 }
 
-/* ======= Taules ======= */
-table {
-    table-layout: fixed;
-    border: 4px solid var(--border-color);
-    border-collapse: collapse;
-    max-width: fit-content;
+/* ======= Taules de sopes ======= */
+.game-board {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
 }
 
-td {
-    width: 50px;
-    height: 50px;
+.game-board table {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border: 4px solid var(--border-color);
+}
+
+.game-board td {
+    width: 10%;
+    height: 10%;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 100%;
     text-align: center;
     user-select: none;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-td:hover {
+.game-board td:hover {
     background-color: var(--secondary-color);
     cursor: pointer;
 }
 
-td:active {
+.game-board td:active {
     background-color: var(--tertiary-color);
 }
+
+/* ======= Taules de ranking ======= */
+
 
 /* ======= Clases ======= */
 .center {
@@ -118,4 +131,41 @@ td:active {
 
 .center-text {
     text-align: center;
+}
+
+.ranking-table-container {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 2em;
+}
+
+.game-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.game-zone {
+    text-align: center;
+    float: left;
+    width: 60%;
+}
+
+.game-words {
+    float: left;
+    width: calc(40% - 4em);
+    margin-left: 2em;
+    margin-top: 8em;
+}
+
+.game-words li {
+    line-height: 2.6;
+    list-style: circle;
+    margin-left: 1em;
+}
+
+#gameTimer,
+#gameScore {
+    border-radius: 0.5em;
+    margin: 1em;
 }

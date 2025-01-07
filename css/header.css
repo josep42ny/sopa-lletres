@@ -3,6 +3,10 @@ header {
     padding-top: 1em;
 }
 
+.admin header {
+    background-color: #cff0ff;
+}
+
 nav {
     margin-top: 1em;
     text-align: center;

@@ -7,6 +7,10 @@ footer {
     border-top: 2px solid var(--border-color);
 }
 
+.admin footer {
+    background-color: #cff0ff;
+}
+
 footer div {
     display: inline-block;
     text-align: start;

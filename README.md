@@ -1,0 +1,16 @@
+- El disseny ha d’estar implementat mitjançant **instruccions bàsiques de CSS** (vistes a classe ). No FLEX, ni GRID, …
+- El disseny ha d’estar implementat dins de **fitxers externs.**
+- Tant l’aplicació administrador com la d’usuari han de tenir un **disseny específic** (que ens permeti diferenciar mitjançant el color de fons, color de la lletra … si esteim a l’aplicació administrador o usuari), **però a la vegada** han de **compartir elements comuns** (trets de disseny que demostren que són clarament dues aplicacions que estan relacionades, formen part del mateix projecte). Això fa que segons el que decidigueu sigui més aconsellable que tot estigui al mateix fitxer CSS, o que hi hagi un fitxer CSS per administrador i un per usuari , … També s’ha de tenir en compte que ha de ser fàcil el manteniment del disseny (evitar repeticions entre fitxers CSS.)
+- El disseny escollit ha de permetre que l’aplicació es **continui vegent bé** quan es modifiqui el tamany de la pantalla, encara que es vegi més petit. Millor que es vegi més petit que no que s’hagi de fer scroll.
+- Fer ús **d’unitats relatives** enlloc d’absolutes (em, rem, %).
+- Fer ús d’una **font de lletra externa** amb les seves variants (bold, cursiva, …).
+- Definir uns aspectes de disseny per a **tots els formularis** (han de compartir del disseny).
+- Definir uns aspectes de disseny per **les taules.**
+- Modificar propietats dels elements per tal que no funcionin amb el seu display per defecte: **inline, block, inline-block.**
+- Fes ús del **model de caixes alternatiu. definint els margins, paddings, borders …** que vulguis, i que no apareguin els de defecte.
+- **Codi comentat, nom de classes , ids representatius.**
+- **Codi estructurat, identat, …**
+- **Els elements compartits entre pàgines** han de compartir format, per exemple: footer, menú primari, menú secundari, botons.
+- **Empra divs o elements semàntics per diferenciar zones, amb per exemple colors.** Exemple: menú primari , menú secundari, zona formularis, …
+- Modificar les **propietats per defecte dels enllaços.**
+- **Modificar les propietats de les imatges.** Exemple: costat amb radius, tamany, …

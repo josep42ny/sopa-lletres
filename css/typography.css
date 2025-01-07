@@ -80,11 +80,13 @@ label {
 }
 
 /* Links */
+a,
 a:visited,
 a:active {
-    color: var(--tertiary-color);
+    text-decoration: none;
+    color: rgb(0, 90, 112);
 }
 
 a:hover {
-    color: var(--highlight-color);
+    color: rgb(1, 177, 190);
 }

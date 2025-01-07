@@ -130,23 +130,13 @@ button.small {
 }
 
 /* ======= Taules de ranking ======= */
-
-
-/* ======= Clases ======= */
-.center {
-    text-align: center;
-}
-
-.center img {
-    display: inline;
-}
-
 .ranking-table-container {
     display: inline-block;
     width: 49%;
     margin-bottom: 2em;
 }
 
+/* ======= Clases de la sopa de lletres ======= */
 .game-container::after {
     content: "";
     display: table;
@@ -176,4 +166,13 @@ button.small {
 #gameScore {
     border-radius: 0.5em;
     margin: 1em;
+}
+
+/* ======= Clases d'utilitat ======= */
+.center {
+    text-align: center;
+}
+
+.center img {
+    display: inline;
 }

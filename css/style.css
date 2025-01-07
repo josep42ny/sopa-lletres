@@ -119,16 +119,11 @@ button:active {
 
 /* ======= Clases ======= */
 .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--tertiary-color);
+    text-align: center;
 }
 
-.center-text {
-    text-align: center;
+.center img {
+    display: inline;
 }
 
 .ranking-table-container {

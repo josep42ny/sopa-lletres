@@ -3,37 +3,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 1fr 1fr;
-    background-image: url(/media/image/FooterBase-cropped.svg);
-    background-size: cover;
     text-align: center;
     color: var(--tx-color);
     padding: 5em 0 0;
-}
-
-.back {
-    position: absolute;
-    z-index: -2;
-}
-
-.wave {
-    object-position: center;
-}
-
-.spiral_dreta {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.spiral_esq {
-    grid-column-start: 8;
-    grid-column-end: 11;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    rotate: 180;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+    background-color: #f8c379;
 }
 
 .admin footer {

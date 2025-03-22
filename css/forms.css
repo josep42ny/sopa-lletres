@@ -1,5 +1,5 @@
-section:has(form) {
-    max-width: 70ch;
+.content:has(form) {
+    max-width: 40ch;
 }
 
 form>* {
@@ -9,10 +9,6 @@ form>* {
 
 form *:not(label) {
     margin-bottom: var(--space-md);
-}
-
-form>button {
-    width: unset;
 }
 
 textarea {

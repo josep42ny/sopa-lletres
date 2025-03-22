@@ -13,202 +13,181 @@
 
 <body>
     <!-- ======= Capçelera ======= -->
-<header>
-        <a href="../../index.html">
-            <img src="../../media/image/logoipsum-284.svg" alt="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="partida.html">Juga</a></li>
-                <li><a href="consulta-punts.html">Resultats</a></li>
-                <li><a href="altra.html">Altra</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
-                <li><a href="mapa.html">Mapa</a></li>
-                <li><a href="configuracio.html">Configuració</a></li>
-                <li><a href="ajuda-usuari.html">Ajuda</a></li>
-                <li><a href="wordSearch.html">Inicia sesió</a></li>
-                <li><a href="alta-usuari.html">Crea conta</a></li>
-                <li><a href="#">Tanca sesió</a></li>
-            </ul>
-            <ul>
-                <li><a href="top-player-01.html">Jugador n1</a></li>
-                <li><a href="top-player-02.html">Jugador n2</a></li>
-                <li><a href="top-player-03.html">Jugador n3</a></li>
-            </ul>
-        </nav>
+    <header>
+        <section class="divider">
+            <div class="mobile"><img src="../../media/image/menu.svg" alt="sidebar" width="24px"></div>
+            <div class="desktop">
+                <a href="../../index.html">
+                    <img src="../../media/image/logoipsum-284.svg" alt="logo">
+                </a>
+            </div>
+            <div class="mobile">
+                <a href="../../index.html">
+                    <img src="../../media/image/logoipsum-284.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="desktop">
+                <a href="partida.html">Juga</a>
+                <a href="consulta-punts.html">Resultats</a>
+                <a href="altra.html">Altra</a>
+                <a href="contacte.html">Contacte</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="configuracio.html">Configuració</a>
+                <a href="ajuda-usuari.html">Ajuda</a>
+            </nav>
+            <div><img src="../../media/image/user.svg" alt="user" width="24px"></div>
+        </section>
     </header>
-        <!-- ======= Contingut principal ======= -->
-<main>
+    <!-- ======= Contingut principal ======= -->
+    <main>
 
-        <section>
-            <h2>Selecciona una sopa</h2>
-            <form action="partida-proccesar-info.php" method="post">
-                <label for="llista-de-sopes">Triau la sopa de lletres que voleu completar</label>
-                <select id="llista-de-sopes" name="llista-de-sopes">
-                    <option value="Sopa1">Sopa 1, dificultat: " "</option>
-                    <option value="Sopa2">Sopa 2, dificultat: " "</option>
-                    <option value="Sopa4">Sopa 4, dificultat: " "</option>
-                    <option value="Sopa6">Sopa 6, dificultat: " "</option>
-                    <option value="Sopa9">Sopa 9, dificultat: " "</option>
-                </select>
-                <button type="submit">Juga</button>
-            </form>
+        <section class="divider">
+            <div class="content">
+                <h1>Nom de la Sopa</h1>
+                <h6>DIFICULTAT MITJA</h6>
+            </div>
         </section>
 
-        <section class="game-container">
-            <div class="game-zone">
-                <h1>[nom de la sopa]</h1>
-                <input id="gameTimer" type="text" name="timer" value="*contador*" disabled>
-                <input id="gameScore" type="text" name="score" value="*puntuació*" disabled>
-                <div class="game-board">
-                    <table>
-                        <tr>
-                            <td>G</td>
-                            <td>J</td>
-                            <td>X</td>
-                            <td>K</td>
-                            <td>B</td>
-                            <td>Q</td>
-                            <td>M</td>
-                            <td>R</td>
-                            <td>P</td>
-                            <td>C</td>
-                        </tr>
-                        <tr>
-                            <td>F</td>
-                            <td>T</td>
-                            <td>Y</td>
-                            <td>E</td>
-                            <td>L</td>
-                            <td>A</td>
-                            <td>H</td>
-                            <td>V</td>
-                            <td>D</td>
-                            <td>Z</td>
-                        </tr>
-                        <tr>
-                            <td>N</td>
-                            <td>S</td>
-                            <td>W</td>
-                            <td>U</td>
-                            <td>O</td>
-                            <td>C</td>
-                            <td>K</td>
-                            <td>I</td>
-                            <td>P</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>J</td>
-                            <td>M</td>
-                            <td>B</td>
-                            <td>R</td>
-                            <td>G</td>
-                            <td>T</td>
-                            <td>D</td>
-                            <td>Q</td>
-                            <td>F</td>
-                            <td>S</td>
-                        </tr>
-                        <tr>
-                            <td>H</td>
-                            <td>A</td>
-                            <td>L</td>
-                            <td>I</td>
-                            <td>C</td>
-                            <td>E</td>
-                            <td>V</td>
-                            <td>X</td>
-                            <td>Y</td>
-                            <td>O</td>
-                        </tr>
-                        <tr>
-                            <td>K</td>
-                            <td>Q</td>
-                            <td>F</td>
-                            <td>R</td>
-                            <td>P</td>
-                            <td>A</td>
-                            <td>B</td>
-                            <td>H</td>
-                            <td>U</td>
-                            <td>D</td>
-                        </tr>
-                        <tr>
-                            <td>T</td>
-                            <td>O</td>
-                            <td>J</td>
-                            <td>S</td>
-                            <td>X</td>
-                            <td>M</td>
-                            <td>Y</td>
-                            <td>K</td>
-                            <td>A</td>
-                            <td>N</td>
-                        </tr>
-                        <tr>
-                            <td>C</td>
-                            <td>E</td>
-                            <td>G</td>
-                            <td>U</td>
-                            <td>W</td>
-                            <td>T</td>
-                            <td>H</td>
-                            <td>Y</td>
-                            <td>D</td>
-                            <td>L</td>
-                        </tr>
-                        <tr>
-                            <td>P</td>
-                            <td>I</td>
-                            <td>M</td>
-                            <td>J</td>
-                            <td>A</td>
-                            <td>N</td>
-                            <td>F</td>
-                            <td>C</td>
-                            <td>O</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>V</td>
-                            <td>R</td>
-                            <td>J</td>
-                            <td>S</td>
-                            <td>L</td>
-                            <td>B</td>
-                            <td>G</td>
-                            <td>T</td>
-                            <td>N</td>
-                            <td>K</td>
-                        </tr>
-                    </table>
-                </div>
-                <button type="submit">Finalitza</button>
+        <section class="divider">
+            <div class="content game-bar">
+                <p>&lt; Enrere</p>
+                <p>4:20</p>
+                <div><img src="../../media/image/help.svg" alt="help" width="24px"></div>
             </div>
-            <div class="game-words">
-                <h2>Paraules</h2>
-                <ul>
-                    <li>Paraula1</li>
-                    <li>Paraula2</li>
-                    <li>Paraula3</li>
-                    <li>Paraula4</li>
-                    <li>Paraula5</li>
-                    <li>Paraula6</li>
-                    <li>Paraula7</li>
-                    <li>Paraula8</li>
-                    <li>Paraula9</li>
-                    <li>Paraula10</li>
-                </ul>
+        </section>
+
+        <section class="orange">
+            <div class="content">
+                <div class="game-board-wrapper">
+                    <div class="game-board">
+                        <div>G</div>
+                        <div>J</div>
+                        <div>X</div>
+                        <div>K</div>
+                        <div>B</div>
+                        <div>Q</div>
+                        <div>M</div>
+                        <div>R</div>
+                        <div>P</div>
+                        <div>C</div>
+                        <div>F</div>
+                        <div>T</div>
+                        <div>Y</div>
+                        <div>E</div>
+                        <div>L</div>
+                        <div>A</div>
+                        <div>H</div>
+                        <div>V</div>
+                        <div>D</div>
+                        <div>Z</div>
+                        <div>N</div>
+                        <div>S</div>
+                        <div>W</div>
+                        <div>U</div>
+                        <div>O</div>
+                        <div>C</div>
+                        <div>K</div>
+                        <div>I</div>
+                        <div>P</div>
+                        <div>X</div>
+                        <div>J</div>
+                        <div>M</div>
+                        <div>B</div>
+                        <div>R</div>
+                        <div>G</div>
+                        <div>T</div>
+                        <div>D</div>
+                        <div>Q</div>
+                        <div>F</div>
+                        <div>S</div>
+                        <div>H</div>
+                        <div>A</div>
+                        <div>L</div>
+                        <div>I</div>
+                        <div>C</div>
+                        <div>E</div>
+                        <div>V</div>
+                        <div>X</div>
+                        <div>Y</div>
+                        <div>O</div>
+                        <div>K</div>
+                        <div>Q</div>
+                        <div>F</div>
+                        <div>R</div>
+                        <div>P</div>
+                        <div>A</div>
+                        <div>B</div>
+                        <div>H</div>
+                        <div>U</div>
+                        <div>D</div>
+                        <div>T</div>
+                        <div>O</div>
+                        <div>J</div>
+                        <div>S</div>
+                        <div>X</div>
+                        <div>M</div>
+                        <div>Y</div>
+                        <div>K</div>
+                        <div>A</div>
+                        <div>N</div>
+                        <div>C</div>
+                        <div>E</div>
+                        <div>G</div>
+                        <div>U</div>
+                        <div>W</div>
+                        <div>T</div>
+                        <div>H</div>
+                        <div>Y</div>
+                        <div>D</div>
+                        <div>L</div>
+                        <div>P</div>
+                        <div>I</div>
+                        <div>M</div>
+                        <div>J</div>
+                        <div>A</div>
+                        <div>N</div>
+                        <div>F</div>
+                        <div>C</div>
+                        <div>O</div>
+                        <div>X</div>
+                        <div>V</div>
+                        <div>R</div>
+                        <div>J</div>
+                        <div>S</div>
+                        <div>L</div>
+                        <div>B</div>
+                        <div>G</div>
+                        <div>T</div>
+                        <div>N</div>
+                        <div>K</div>
+                    </div>
+                </div>
             </div>
 
+        </section>
+
+        <section class="orange">
+            <div class="content">
+                <div id="game-words">
+                    <div>Paraula1</div>
+                    <div>Paraula2</div>
+                    <div>Paraula3</div>
+                    <div>Paraula4</div>
+                    <div>Paraula5</div>
+                    <div>Paraula6</div>
+                    <div>Paraula7</div>
+                    <div>Paraula8</div>
+                    <div>Paraula9</div>
+                    <div>Paraula10</div>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    
-        <!-- ======= Peu de pàgina ======= -->
-<footer>
+
+    <!-- ======= Peu de pàgina ======= -->
+    <footer>
         <div>
             <h2>Josep Fortuny</h2>
             <ul>

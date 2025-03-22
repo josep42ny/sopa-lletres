@@ -1,32 +1,18 @@
-header {
-    background-color: #ffeacf;
-    padding-top: 1em;
+header section {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
 }
 
 .admin header {
     background-color: #cff0ff;
 }
 
-nav {
-    margin-top: 1em;
-    text-align: center;
-}
-
 /* Links del nav */
-nav ul {
-    list-style: none;
-    border-bottom: 2px solid gray;
-}
-
-nav li {
-    display: inline-block;
-    padding: 1em 0;
-    width: 8em;
-}
-
-nav li:hover {
-    box-shadow: 0 4px var(--highlight-color);
-    color: var(--highlight-color);
+nav {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 nav a,
@@ -35,6 +21,7 @@ nav a:active,
 nav a:hover {
     display: block;
     height: 100%;
+    width: 100%;
     text-decoration: none;
     font-weight: 700;
     color: var(--color-heading);
@@ -50,3 +37,23 @@ header>a {
 header>a img {
     width: 16em;
 }
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+@media (min-width: 1008px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
+}
+
+/*#b6e8ff*/

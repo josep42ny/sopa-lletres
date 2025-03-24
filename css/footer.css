@@ -8,7 +8,6 @@ footer {
     background-image: radial-gradient(circle at 1px 1px, rgb(219, 219, 219) 1px, transparent 0);
     background-size: 10px 10px;
     border-top: 2px solid var(--border-color);
-    margin-top: 4em;
 }
 
 .admin footer {

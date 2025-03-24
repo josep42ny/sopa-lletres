@@ -17,3 +17,19 @@
     --space-xxxxl: calc(13.75 * var(--space-unit));
     --component-padding: var(--space-md);
 }
+
+.space-md {
+    margin-bottom: var(--space-md);
+}
+
+.space-lg {
+    margin-bottom: var(--space-lg);
+}
+
+.space-xl {
+    margin-bottom: var(--space-xl);
+}
+
+.space-top-xl {
+    margin-top: var(--space-xl);
+}

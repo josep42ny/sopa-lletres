@@ -1,6 +1,7 @@
 header section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1em 2em;
 }
 
@@ -10,21 +11,30 @@ header section {
 
 /* Links del nav */
 nav {
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 nav a,
 nav a:visited,
 nav a:active,
 nav a:hover {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    width: 100%;
+    width: 15ch;
     text-decoration: none;
     font-weight: 700;
-    color: var(--color-heading);
+    color: var(--heading-color);
+}
+
+#login {
+    color: white;
+    background-color: #0f0f0f;
+    border-radius: 0.25em;
+    padding: 0.5em 1.5em;
 }
 
 /* Logo */
@@ -32,28 +42,6 @@ header>a {
     display: block;
     width: fit-content;
     margin: 0 auto;
-}
-
-header>a img {
-    width: 16em;
-}
-
-.desktop {
-    display: none;
-}
-
-.mobile {
-    display: block;
-}
-
-@media (min-width: 1008px) {
-    .mobile {
-        display: none;
-    }
-
-    .desktop {
-        display: flex;
-    }
 }
 
 /*#b6e8ff*/

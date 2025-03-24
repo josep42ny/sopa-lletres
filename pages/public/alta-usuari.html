@@ -9,36 +9,100 @@
     <link rel="stylesheet" href="../../css/style.css">
     <title>Registre</title>
     <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
+    <script src="/js/script.js" defer></script>
 </head>
 
 <body>
+    <!-- ======= Menu desplegable ======= -->
+    <aside id="sidebar">
+        <div class="top">
+            <div id="sidebarClose">
+                <img src="../../media/image/x-close.svg" alt="close" width="28">
+            </div>
+            <a href="">
+                <img src="../../media/image/user.svg" alt="user" width="28">
+                <h1>NomUsuari</h1>
+            </a>
+            <a href="partida.html">
+                <img src="../../media/image/controller.svg" alt="controller" width="20">
+                Juga
+            </a>
+            <a href="contacte.html">
+                <img src="../../media/image/mail.svg" alt="mail" width="20">
+                Contacte
+            </a>
+            <a href="mapa.html">
+                <img src="../../media/image/map.svg" alt="map" width="20">
+                Mapa
+            </a>
+            <a href="consulta-punts.html">
+                <img src="../../media/image/star.svg" alt="star" width="20">
+                Puntuacions
+            </a>
+            <a></a>
+            <a href="top-player-01.html">
+                <img src="../../media/image/medal-gold.svg" alt="gold medal" width="20">
+                NomJugador1
+            </a>
+            <a href="top-player-02.html">
+                <img src="../../media/image/medal-silver.svg" alt="silver medal" width="20">
+                NomJugador2
+            </a>
+            <a href="top-player-03.html">
+                <img src="../../media/image/medal-bronze.svg" alt="bronze medal" width="20">
+                NomJugador3
+            </a>
+        </div>
+
+        <div class="bottom">
+            <a href="configuracio.html">
+                <img src="../../media/image/gear.svg" alt="settigns" width="20">
+                Configuració
+            </a>
+            <a href="ajuda-usuari.html">
+                <img src="../../media/image/help.svg" alt="help" width="20">
+                Informació i ajuda
+            </a>
+        </div>
+    </aside>
+
     <!-- ======= Capçelera ======= -->
-<header>
-        <a href="../../index.html">
-            <img src="../../media/image/logoipsum-284.svg" alt="logo">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="partida.html">Juga</a></li>
-                <li><a href="consulta-punts.html">Resultats</a></li>
-                <li><a href="altra.html">Altra</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
-                <li><a href="mapa.html">Mapa</a></li>
-                <li><a href="configuracio.html">Configuració</a></li>
-                <li><a href="ajuda-usuari.html">Ajuda</a></li>
-                <li><a href="wordSearch.html">Inicia sesió</a></li>
-                <li><a href="alta-usuari.html">Crea conta</a></li>
-                <li><a href="#">Tanca sesió</a></li>
-            </ul>
-            <ul>
-                <li><a href="top-player-01.html">Jugador n1</a></li>
-                <li><a href="top-player-02.html">Jugador n2</a></li>
-                <li><a href="top-player-03.html">Jugador n3</a></li>
-            </ul>
-        </nav>
+    <header>
+        <section class="divider">
+            <div class="mobile">
+                <a id="sidebarOpen">
+                    <img src="../../media/image/menu.svg" alt="sidebar" height="24">
+                </a>
+            </div>
+            <div>
+                <a href="../../index.html">
+                    <img src="../../media/image/logoipsum-284.svg" alt="logo" height="32">
+                </a>
+            </div>
+            <nav class="desktop">
+                <a href="partida.html">Juga</a>
+                <a href="consulta-punts.html">Resultats</a>
+                <a href="altra.html">Altra</a>
+                <a href="contacte.html">Contacte</a>
+                <a href="mapa.html">Mapa</a>
+                <a href="configuracio.html">Configuració</a>
+                <a href="ajuda-usuari.html">Ajuda</a>
+            </nav>
+            <div class="mobile">
+                <a href="wordSearch.html">
+                    <img src="../../media/image/login.svg" alt="login" height="24">
+                </a>
+            </div>
+            <div class="desktop">
+                <a id="login" href="wordSearch.html">
+                    Inicia sesió
+                </a>
+            </div>
+        </section>
     </header>
-        <!-- ======= Contingut principal ======= -->
-<main>
+
+    <!-- ======= Contingut principal ======= -->
+    <main>
 
         <section>
             <h1>Crea una conta nova</h1>
@@ -65,9 +129,9 @@
 
     </main>
 
-    
-        <!-- ======= Peu de pàgina ======= -->
-<footer>
+
+    <!-- ======= Peu de pàgina ======= -->
+    <footer>
         <div>
             <h2>Josep Fortuny</h2>
             <ul>

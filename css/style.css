@@ -15,7 +15,7 @@
 }
 
 html {
-    color: var(--tx-color);
+    color: var(--text-color);
     font-family: "Open Sans", sans-serif;
 }
 
@@ -33,6 +33,10 @@ iframe.map {
     border-radius: 0.25em;
 }
 
+a:has(>img) {
+    display: flex;
+}
+
 /* ======= Disposició de les pàgines ======= */
 section {
     display: flex;
@@ -41,7 +45,7 @@ section {
 }
 
 .content {
-    flex: 0 1 1440px;
+    flex: 0 1 720px;
 }
 
 /* ======= Noticies ======= */
@@ -111,17 +115,23 @@ button.small {
     box-shadow: 0 6px #00000050;
     user-select: none;
     cursor: pointer;
+    font-size: 1.25rem;
+    touch-action: none;
 }
 
 .game-board {
     display: grid;
-    width: fit-content;
-    grid-template-columns: repeat(10, minmax(10%, 2em));
-    grid-template-rows: repeat(10, minmax(10%, 2em));
+    grid-template-columns: repeat(10, minmax(10%, max-content));
+    grid-template-rows: repeat(10, minmax(10%, max-content));
     justify-items: center;
     align-items: center;
     font-family: 'Fira Mono', sans-serif;
     font-weight: 600;
+    aspect-ratio: 1;
+}
+
+.game-board>div {
+    padding: 0.5em;
 }
 
 section:has(.game-bar) {
@@ -156,6 +166,49 @@ section:has(.game-bar) {
     margin-bottom: 2em;
 }
 
+/* ======= Menu desplegable ======= */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: calc(-100vw - 18rem);
+    width: 18rem;
+    height: 100vh;
+    padding: 1.5em;
+    background-color: #ffffff;
+    box-shadow: 0 0 16px #00000050;
+    transition: left 0.2s;
+}
+
+aside .top>a:nth-child(2) {
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+}
+
+aside .top>a,
+aside .bottom>a {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+#sidebarClose {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+#sidebarOpen,
+#sidebarClose {
+    cursor: pointer;
+}
+
 /* ======= Clases d'utilitat ======= */
 .center {
     text-align: center;
@@ -171,4 +224,23 @@ section:has(.game-bar) {
 
 .divider {
     border-bottom: 1px solid var(--divider-color);
+}
+
+/* ======= Media querys ======= */
+@media (max-width: 1399px) {
+    .desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 620px) {
+    .game-board-wrapper {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .mobile {
+        display: none;
+    }
 }

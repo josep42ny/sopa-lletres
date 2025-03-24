@@ -23,7 +23,7 @@
                 <img src="../../media/image/user.svg" alt="user" width="28">
                 <h1>NomUsuari</h1>
             </a>
-            <a href="partida.html">
+            <a href="puzzle-select.html">
                 <img src="../../media/image/controller.svg" alt="controller" width="20">
                 Juga
             </a>
@@ -80,9 +80,8 @@
                 </a>
             </div>
             <nav class="desktop">
-                <a href="partida.html">Juga</a>
+                <a href="puzzle-select.html">Juga</a>
                 <a href="consulta-punts.html">Resultats</a>
-                <a href="altra.html">Altra</a>
                 <a href="contacte.html">Contacte</a>
                 <a href="mapa.html">Mapa</a>
                 <a href="configuracio.html">Configuració</a>
@@ -99,76 +98,67 @@
                 </a>
             </div>
         </section>
-        <style>
-            .cards {
-                display: grid;
-                grid-template-columns: 1fr 1.5fr 1fr;
-                grid-template-rows: 1em 200px 1em;
-            }
-
-            .card {
-                grid-column: 2 span 1;
-                grid-row: span 3;
-            }
-
-            .card:nth-child(2) {
-                grid-area: 1/5/4/9;
-            }
-        </style>
     </header>
 
     <!-- ======= Contingut principal ======= -->
     <main>
 
-        <section>
+        <section class="orange full-center">
             <div class="content">
-                <div class="cards">
-                    <div class="card">
-                        a
-                    </div>
-                    <div class="card">
-                        b
-                    </div>
-                    <div class="card">
-                        c
-                    </div>
-                </div>
                 <h1>Consulta de punts</h1>
-                <ol>
-                    <li>🌏 Sopa de països: 300</li>
-                    <li>🐸 Sopa d'animals: 200</li>
-                    <li>📚 Sopa de llibres: 175</li>
-                    <li>🩱 Sopa de vacançes: 200</li>
-                    <li>👩‍💻 Sopa de programació: 175</li>
-                </ol>
+                <table class="ranking-table">
+                    <tr>
+                        <th>Nom</th>
+                        <th>Punts</th>
+                    </tr>
+                    <tr>
+                        <td>🌏 Sopa de països</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>🐸 Sopa d'animals</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>📚 Sopa de llibres</td>
+                        <td>175</td>
+                    </tr>
+                    <tr>
+                        <td>🩱 Sopa de vacançes</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>👩‍💻 Sopa de programació</td>
+                        <td>175</td>
+                    </tr>
+                </table>
             </div>
         </section>
 
     </main>
 
-
     <!-- ======= Peu de pàgina ======= -->
     <footer>
-        <div>
+        <div class="josep">
             <h2>Josep Fortuny</h2>
             <ul>
-                <li><a href="https://example.com/"><img src="../../media/image/facebook-icon.svg" alt="facebook"
+                <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"
                             width="20">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/twitter-icon.svg" alt="twitter"
+                <li><a href="https://example.com/"><img src="../../media/image/twitter.svg" alt="twitter"
                             width="16">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/instagram-icon.svg" alt="instagram"
+                <li><a href="https://example.com/"><img src="../../media/image/instagram.svg" alt="instagram"
                             width="20">@exemple</a></li>
                 <li><a href="mailto:email@example.com">email@example.com</a></li>
             </ul>
         </div>
-        <div>
+        <div class="toni">
             <h2>Toni Riera</h2>
             <ul>
-                <li><a href="https://example.com/"><img src="../../media/image/facebook-icon.svg" alt="facebook"
+                <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"
                             width="20">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/twitter-icon.svg" alt="twitter"
+                <li><a href="https://example.com/"><img src="../../media/image/twitter.svg" alt="twitter"
                             width="16">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/instagram-icon.svg" alt="instagram"
+                <li><a href="https://example.com/"><img src="../../media/image/instagram.svg" alt="instagram"
                             width="20">@exemple</a></li>
                 <li><a href="mailto:email@example.com">email@example.com</a></li>
             </ul>

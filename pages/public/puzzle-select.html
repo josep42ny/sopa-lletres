@@ -23,7 +23,7 @@
                 <img src="../../media/image/user.svg" alt="user" width="28">
                 <h1>NomUsuari</h1>
             </a>
-            <a href="partida.html">
+            <a href="puzzle-select.html">
                 <img src="../../media/image/controller.svg" alt="controller" width="20">
                 Juga
             </a>
@@ -80,9 +80,8 @@
                 </a>
             </div>
             <nav class="desktop">
-                <a href="partida.html">Juga</a>
+                <a href="puzzle-select.html">Juga</a>
                 <a href="consulta-punts.html">Resultats</a>
-                <a href="altra.html">Altra</a>
                 <a href="contacte.html">Contacte</a>
                 <a href="mapa.html">Mapa</a>
                 <a href="configuracio.html">Configuració</a>
@@ -104,63 +103,47 @@
     <!-- ======= Contingut principal ======= -->
     <main>
 
-        <section>
+        <section class="full-center">
             <div class="content">
-                <h1>Pagina extra de plugin dejavascript</h1>
-                <h2>Top 3 jugadors</h2>
-                <table style="width: 100%;">
-                    <tr>
-                        <td>
-                            <a href="https://www.example.com/">
-                                <img src="../../media/image/img_provisional_usuari_top1.png"
-                                    alt="imatge del usuari top 1" width="200" height="200">
-                            </a>
-                            <p>TOP 1 "nom de l'usuari"</p>
-                        </td>
-                        <td>
-                            <a href="https://www.example.com/">
-                                <img src="../../media/image/img_provisional_usuari_top2.png"
-                                    alt="imatge del usuari top 1" width="200" height="200">
-                            </a>
-                            <p>TOP 2 "nom de l'usuari"</p>
-                        </td>
-                        <td>
-                            <a href="https://www.example.com/">
-                                <img src="../../media/image/img_provisional_usuari_top3.png"
-                                    alt="imatge del usuari top 1" width="200" height="200">
-                            </a>
-                            <p>TOP 3 "nom de l'usuari"</p>
-                        </td>
-                    </tr>
-                </table>
+                <img id="brain" src="/media/image/brain.svg" alt="brain">
+                <form action="partida.html">
+                    <h1 class="center space-md space-md-top">Sel·lecciona una sopa</h1>
+                    <select name="puzzle" id="puzzle">
+                        <option value="1">Puzzle01</option>
+                        <option value="2">Puzzle02</option>
+                        <option value="3">Puzzle03</option>
+                        <option value="4">Puzzle04</option>
+                        <option value="5">Puzzle05</option>
+                    </select>
+                    <button type="submit">Jugar sopa</button>
+                </form>
             </div>
         </section>
 
     </main>
 
-
     <!-- ======= Peu de pàgina ======= -->
     <footer>
-        <div>
+        <div class="josep">
             <h2>Josep Fortuny</h2>
             <ul>
-                <li><a href="https://example.com/"><img src="../../media/image/facebook-icon.svg" alt="facebook"
+                <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"
                             width="20">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/twitter-icon.svg" alt="twitter"
+                <li><a href="https://example.com/"><img src="../../media/image/twitter.svg" alt="twitter"
                             width="16">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/instagram-icon.svg" alt="instagram"
+                <li><a href="https://example.com/"><img src="../../media/image/instagram.svg" alt="instagram"
                             width="20">@exemple</a></li>
                 <li><a href="mailto:email@example.com">email@example.com</a></li>
             </ul>
         </div>
-        <div>
+        <div class="toni">
             <h2>Toni Riera</h2>
             <ul>
-                <li><a href="https://example.com/"><img src="../../media/image/facebook-icon.svg" alt="facebook"
+                <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"
                             width="20">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/twitter-icon.svg" alt="twitter"
+                <li><a href="https://example.com/"><img src="../../media/image/twitter.svg" alt="twitter"
                             width="16">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/instagram-icon.svg" alt="instagram"
+                <li><a href="https://example.com/"><img src="../../media/image/instagram.svg" alt="instagram"
                             width="20">@exemple</a></li>
                 <li><a href="mailto:email@example.com">email@example.com</a></li>
             </ul>

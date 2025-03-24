@@ -1,5 +1,12 @@
 .content:has(form) {
-    max-width: 40ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+form {
+    flex: 0 1 60ch;
 }
 
 form>* {
@@ -15,10 +22,6 @@ textarea {
     height: 5em;
     min-height: 5em;
     resize: vertical;
-}
-
-fieldset {
-    padding: 0 1em;
 }
 
 input,

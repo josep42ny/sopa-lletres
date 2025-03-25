@@ -6,95 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Toni Riera & Josep Fortuny">
     <meta name="description" content="Sopa de lletres">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Sopa de lletres</title>
-    <link rel="icon" href="media/image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/media/image/favicon.ico" type="image/x-icon">
+    <script src="/js/script.js" defer></script>
 </head>
 
 <body>
 
     <!-- ======= Capçelera ======= -->
     <header>
-        <a href="index.html">
-            <img src="media/image/logoipsum-284.svg" alt="logo">
-        </a>
-    </header>
-
-    <!-- ======= Contingut principal ======= -->
-    <main>
-
-        <section style="text-align: center;">
-
-            <h1>Index</h1>
-            <div style="display: inline-block; margin: 0 4em; text-align: start;">
-                <h2>Admin</h2>
-                <ul>
-                    <li><a href="pages/admin/consulta-ranking-millors.html">Ranking usuairs</a></li>
-                    <li><a href="pages/admin/consulta-usuaris.html">Consulta usuaris</a></li>
-                    <li><a href="pages/admin/baixa-usuari.html">Baixa usuari</a></li>
-                    <li><a href="pages/admin/consulta-resultats.html">Resultats per sopa de lletres</a></li>
-                    <li><a href="pages/admin/consulta-sopa-lletres.html">Consulta sopa de lletres</a></li>
-                    <li><a href="pages/admin/alta-sopa-lletres.html">Alta sopa de lletres</a></li>
-                    <li><a href="pages/admin/baixa-sopa-lletres.html">Baixa sopa de lletres</a></li>
-                    <li><a href="pages/admin/ajuda-admin.html">Ajuda</a></li>
-                    <li><a href="pages/admin/admin_wordSearch.html">Inicia sesió</a></li>
-                    <li><a href="#">Tanca la sesió</a></li>
-                </ul>
+        <section class="divider">
+            <div class="mobile">
+                <a id="sidebarOpen">
+                    <img src="/media/image/menu.svg" alt="sidebar" height="24">
+                </a>
             </div>
-
-            <div style="display: inline-block; margin: 0 4em; text-align: start;">
-                <h2>Usuari</h2>
-                <ul>
-                    <li><a href="pages/public/partida.html">Juga</a></li>
-                    <li><a href="pages/public/consulta-punts.html">Resultats</a></li>
-                    <li><a href="pages/public/altra.html">Altra</a></li>
-                    <li><a href="pages/public/contacte.html">Contacte</a></li>
-                    <li><a href="pages/public/mapa.html">Mapa</a></li>
-                    <li><a href="pages/public/configuracio.html">Configuració</a></li>
-                    <li><a href="pages/public/ajuda-usuari.html">Ajuda</a></li>
-                    <li><a href="pages/public/wordSearch.html">Inicia sesió</a></li>
-                    <li><a href="pages/public/alta-usuari.html">Crea conta</a></li>
-                    <li><a href="#">Tanca sesió</a></li>
-                    <li><a href="pages/public/top-player-01.html">Jugador n1</a></li>
-                    <li><a href="pages/public/top-player-02.html">Jugador n2</a></li>
-                    <li><a href="pages/public/top-player-03.html">Jugador n3</a></li>
-                </ul>
+            <div>
+                <a href="/index.html">
+                    <img src="/media/image/logoipsum-284.svg" alt="logo" height="32">
+                </a>
+            </div>
+            <nav class="desktop">
+                <a href="/pages/admin/user-top.html">Ranking</a>
+                <a href="/pages/admin/user-list.html">Usuaris</a>
+                <a href="/pages/admin/user-delete.html">Baixes</a>
+                <a href="/pages/admin/user-scores.html">Resultats</a>
+                <a href="/pages/admin/puzzle-list.html">Sopes</a>
+                <a href="/pages/admin/puzzle-create.html">Nova sopa</a>
+                <a href="/pages/admin/puzzle-delete.html">Baixa sopa</a>
+                <a href="/pages/admin/help.html">Ajuda</a>
+            </nav>
+            <div class="mobile">
+                <a href="/pages/admin/admin_wordSearch.html">
+                    <img src="/media/image/login.svg" alt="login" height="24">
+                </a>
+            </div>
+            <div class="desktop">
+                <a id="login" href="/pages/admin/admin_wordSearch.html">
+                    Inicia sesió
+                </a>
             </div>
         </section>
+    </header>
 
-    </main>
-
-
-    <!-- ======= Peu de pàgina ======= -->
-    <footer>
-        <div>
-            <h2>Josep Fortuny</h2>
-            <ul>
-                <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"
-                            width="20">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/twitter.svg" alt="twitter"
-                            width="16">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/instagram.svg" alt="instagram"
-                            width="20">@exemple</a></li>
-                <li><a href="mailto:email@example.com">email@example.com</a></li>
-            </ul>
-        </div>
-        <div>
-            <h2>Toni Riera</h2>
-            <ul>
-                <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"
-                            width="20">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/twitter.svg" alt="twitter"
-                            width="16">@exemple</a></li>
-                <li><a href="https://example.com/"><img src="../../media/image/instagram.svg" alt="instagram"
-                            width="20">@exemple</a></li>
-                <li><a href="mailto:email@example.com">email@example.com</a></li>
-            </ul>
-        </div>
-        <p>
-            Pàgina feta per Toni Riera i Josep Fortuny. 2024
-        </p>
-    </footer>
+    <!-- ======= Capçelera ======= -->
+    <header>
+        <section class="divider">
+            <div class="mobile">
+                <a id="sidebarOpen">
+                    <img src="/media/image/menu.svg" alt="sidebar" height="24">
+                </a>
+            </div>
+            <div>
+                <a href="/index.html">
+                    <img src="/media/image/logoipsum-284.svg" alt="logo" height="32">
+                </a>
+            </div>
+            <nav class="desktop">
+                <a href="/pages/public/puzzle-select.html">Juga</a>
+                <a href="/pages/public/consulta-punts.html">Resultats</a>
+                <a href="/pages/public/contacte.html">Contacte</a>
+                <a href="/pages/public/mapa.html">Mapa</a>
+                <a href="/pages/public/configuracio.html">Configuració</a>
+                <a href="/pages/public/ajuda-usuari.html">Ajuda</a>
+            </nav>
+            <div class="mobile">
+                <a href="/pages/public/wordSearch.html">
+                    <img src="/media/image/login.svg" alt="login" height="24">
+                </a>
+            </div>
+            <div class="desktop">
+                <a id="login" href="/pages/public/wordSearch.html">
+                    Inicia sesió
+                </a>
+            </div>
+        </section>
+    </header>
 
 </body>
 

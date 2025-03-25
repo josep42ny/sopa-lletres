@@ -5,13 +5,13 @@ footer {
     grid-template-rows: 1fr 1fr 1fr;
     text-align: center;
     padding: 5em 0 0;
-    background-image: radial-gradient(circle at 1px 1px, rgb(219, 219, 219) 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, #ebebeb 1px, transparent 0);
     background-size: 10px 10px;
     border-top: 2px solid var(--border-color);
 }
 
 .admin footer {
-    background-color: #b6e8ff;
+    background-color: #eefcff;
 }
 
 .josep {

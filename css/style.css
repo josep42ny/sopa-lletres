@@ -143,6 +143,15 @@ button.small {
     padding: 0.5em;
 }
 
+.game-board>input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0 0.25em;
+}
+
 section:has(.game-bar) {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -212,6 +221,13 @@ section:has(.game-bar) {
 }
 
 /* ======= Taules de ranking ======= */
+.ranking-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25ch, 45%));
+    gap: 1em;
+    justify-content: center;
+}
+
 table.ranking-table {
     background-color: white;
     border-collapse: collapse;
@@ -313,6 +329,12 @@ aside .bottom>a {
     color: var(--text-color);
 }
 
+.words-create {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15ch, 45%));
+    gap: 1em;
+}
+
 section.full-center {
     min-height: 90vh;
     justify-content: center;
@@ -326,7 +348,7 @@ section.full-center {
 }
 
 /* ======= Media querys ======= */
-@media (max-width: 1399px) {
+@media (max-width: 1434px) {
     .desktop {
         display: none;
     }
@@ -338,7 +360,7 @@ section.full-center {
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1435px) {
     .mobile {
         display: none;
     }

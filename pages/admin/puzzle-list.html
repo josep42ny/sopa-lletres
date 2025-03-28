@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Toni Riera & Josep Fortuny">
     <meta name="description" content="Sopa de lletres">
-    <link rel="stylesheet" href="../../css/style.css">
     <title>Sopa de lletres</title>
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
     <script src="/js/script.js" defer></script>
 </head>
 
-<body>
+<body class="admin">
     <!-- ======= Menu desplegable ======= -->
     <aside id="sidebar">
         <div class="top">
@@ -20,46 +20,41 @@
                 <img src="../../media/image/x-close.svg" alt="close" width="28">
             </div>
             <a href="">
-                <img src="../../media/image/user.svg" alt="user" width="28">
-                <h1>NomUsuari</h1>
+                <img src="../../media/image/user.svg" alt="admin" width="28">
+                <h1>NomAdmin</h1>
             </a>
-            <a href="puzzle-select.html">
-                <img src="../../media/image/controller.svg" alt="controller" width="20">
-                Juga
+            <a href="user-top.html">
+                <img src="../../media/image/ranking.svg" alt="controller" width="20">
+                Ranking
             </a>
-            <a href="contacte.html">
-                <img src="../../media/image/mail.svg" alt="mail" width="20">
-                Contacte
+            <a href="user-list.html">
+                <img src="../../media/image/users.svg" alt="mail" width="20">
+                Usuaris
             </a>
-            <a href="mapa.html">
-                <img src="../../media/image/map.svg" alt="map" width="20">
-                Mapa
+            <a href="user-delete.html">
+                <img src="../../media/image/user-delete.svg" alt="map" width="20">
+                Baixes
             </a>
-            <a href="consulta-punts.html">
+            <a href="user-scores.html">
                 <img src="../../media/image/star.svg" alt="star" width="20">
-                Puntuacions
+                Resultats
             </a>
-            <a></a>
-            <a href="top-player-01.html">
-                <img src="../../media/image/medal-gold.svg" alt="gold medal" width="20">
-                NomJugador1
+            <a href="puzzle-list.html">
+                <img src="../../media/image/puzzle.svg" alt="gold medal" width="20">
+                Sopes
             </a>
-            <a href="top-player-02.html">
-                <img src="../../media/image/medal-silver.svg" alt="silver medal" width="20">
-                NomJugador2
+            <a href="puzzle-create.html">
+                <img src="../../media/image/create-file.svg" alt="silver medal" width="20">
+                Nova sopa
             </a>
-            <a href="top-player-03.html">
-                <img src="../../media/image/medal-bronze.svg" alt="bronze medal" width="20">
-                NomJugador3
+            <a href="puzzle-delete.html">
+                <img src="../../media/image/delete-file.svg" alt="bronze medal" width="20">
+                Baixa sopa
             </a>
         </div>
 
         <div class="bottom">
-            <a href="configuracio.html">
-                <img src="../../media/image/gear.svg" alt="settigns" width="20">
-                Configuració
-            </a>
-            <a href="ajuda-usuari.html">
+            <a href="help.html">
                 <img src="../../media/image/help.svg" alt="help" width="20">
                 Informació i ajuda
             </a>
@@ -76,32 +71,57 @@
             </div>
             <div>
                 <a href="../../index.html">
-                    <img src="../../media/image/logoipsum-284.svg" alt="logo" height="32" width="140">
+                    <img src="../../media/image/logoipsum-284.svg" alt="logo" height="32">
                 </a>
             </div>
             <nav class="desktop">
-                <a href="puzzle-select.html">Juga</a>
-                <a href="consulta-punts.html">Resultats</a>
-                <a href="contacte.html">Contacte</a>
-                <a href="mapa.html">Mapa</a>
-                <a href="configuracio.html">Configuració</a>
-                <a href="ajuda-usuari.html">Ajuda</a>
+                <a href="user-top.html">Ranking</a>
+                <a href="user-list.html">Usuaris</a>
+                <a href="user-delete.html">Baixes</a>
+                <a href="user-scores.html">Resultats</a>
+                <a href="puzzle-list.html">Sopes</a>
+                <a href="puzzle-create.html">Nova sopa</a>
+                <a href="puzzle-delete.html">Baixa sopa</a>
+                <a href="help.html">Ajuda</a>
             </nav>
             <div class="mobile">
-                <a href="wordSearch.html">
+                <a href="admin_wordSearch.html">
                     <img src="../../media/image/login.svg" alt="login" height="24">
                 </a>
             </div>
             <div class="desktop">
-                <a id="login" href="wordSearch.html">
+                <a id="login" href="admin_wordSearch.html">
                     Inicia sesió
                 </a>
             </div>
         </section>
     </header>
 
+
     <!-- ======= Contingut principal ======= -->
     <main>
+
+        <section class="divider full-center">
+            <div class="content">
+                <h1 class="space-md center">Consulta una <br>sopa de lletres</h1>
+                <form action="#" method="post">
+                    <label for="puzzle-list">Triau la sopa de lletres que voleu consultar</label>
+                    <select id="puzzle-list" name="llista-sopa-lletres">
+                        <option value="1">Sopa nº1</option>
+                        <option value="2">Sopa nº2</option>
+                        <option value="3">Sopa nº3</option>
+                        <option value="4">Sopa nº4</option>
+                        <option value="5">Sopa nº5</option>
+                        <option value="6">Sopa nº6</option>
+                        <option value="7">Sopa nº7</option>
+                        <option value="8">Sopa nº8</option>
+                        <option value="9">Sopa nº9</option>
+                        <option value="10">Sopa nº10</option>
+                    </select>
+                    <button type="submit">Consulta</button>
+                </form>
+            </div>
+        </section>
 
         <section class="divider">
             <div class="content">
@@ -113,8 +133,6 @@
         <section class="divider">
             <div class="content game-bar">
                 <p><a href="puzzle-select.html" class="nolink">&lt; Enrere</a></p>
-                <p>4:20</p>
-                <a href="ajuda-usuari.html"><img src="../../media/image/help.svg" alt="help" width="24"></a>
             </div>
         </section>
 
@@ -247,8 +265,7 @@
 
     </main>
 
-
-    <!-- ======= Peu de pàgina ======= --> <!-- ======= Peu de pàgina ======= -->
+    <!-- ======= Peu de pàgina ======= -->
     <footer>
         <div class="josep">
             <h2>Josep Fortuny</h2>

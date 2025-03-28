@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Toni Riera & Josep Fortuny">
     <meta name="description" content="Sopa de lletres">
+    <title>Pàgina baixa d'usuaris</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <title>Registre</title>
-    <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../media/image/" type="image/x-icon">
     <script src="/js/script.js" defer></script>
 </head>
 
-<body>
+<body class="admin">
     <!-- ======= Menu desplegable ======= -->
     <aside id="sidebar">
         <div class="top">
@@ -20,46 +20,41 @@
                 <img src="../../media/image/x-close.svg" alt="close" width="28">
             </div>
             <a href="">
-                <img src="../../media/image/user.svg" alt="user" width="28">
-                <h1>NomUsuari</h1>
+                <img src="../../media/image/user.svg" alt="admin" width="28">
+                <h1>NomAdmin</h1>
             </a>
-            <a href="puzzle-select.html">
-                <img src="../../media/image/controller.svg" alt="controller" width="20">
-                Juga
+            <a href="user-top.html">
+                <img src="../../media/image/ranking.svg" alt="controller" width="20">
+                Ranking
             </a>
-            <a href="contacte.html">
-                <img src="../../media/image/mail.svg" alt="mail" width="20">
-                Contacte
+            <a href="user-list.html">
+                <img src="../../media/image/users.svg" alt="mail" width="20">
+                Usuaris
             </a>
-            <a href="mapa.html">
-                <img src="../../media/image/map.svg" alt="map" width="20">
-                Mapa
+            <a href="user-delete.html">
+                <img src="../../media/image/user-delete.svg" alt="map" width="20">
+                Baixes
             </a>
-            <a href="consulta-punts.html">
+            <a href="user-scores.html">
                 <img src="../../media/image/star.svg" alt="star" width="20">
-                Puntuacions
+                Resultats
             </a>
-            <a></a>
-            <a href="top-player-01.html">
-                <img src="../../media/image/medal-gold.svg" alt="gold medal" width="20">
-                NomJugador1
+            <a href="puzzle-list.html">
+                <img src="../../media/image/puzzle.svg" alt="gold medal" width="20">
+                Sopes
             </a>
-            <a href="top-player-02.html">
-                <img src="../../media/image/medal-silver.svg" alt="silver medal" width="20">
-                NomJugador2
+            <a href="puzzle-create.html">
+                <img src="../../media/image/create-file.svg" alt="silver medal" width="20">
+                Nova sopa
             </a>
-            <a href="top-player-03.html">
-                <img src="../../media/image/medal-bronze.svg" alt="bronze medal" width="20">
-                NomJugador3
+            <a href="puzzle-delete.html">
+                <img src="../../media/image/delete-file.svg" alt="bronze medal" width="20">
+                Baixa sopa
             </a>
         </div>
 
         <div class="bottom">
-            <a href="configuracio.html">
-                <img src="../../media/image/gear.svg" alt="settigns" width="20">
-                Configuració
-            </a>
-            <a href="ajuda-usuari.html">
+            <a href="help.html">
                 <img src="../../media/image/help.svg" alt="help" width="20">
                 Informació i ajuda
             </a>
@@ -80,20 +75,22 @@
                 </a>
             </div>
             <nav class="desktop">
-                <a href="puzzle-select.html">Juga</a>
-                <a href="consulta-punts.html">Resultats</a>
-                <a href="contacte.html">Contacte</a>
-                <a href="mapa.html">Mapa</a>
-                <a href="configuracio.html">Configuració</a>
-                <a href="ajuda-usuari.html">Ajuda</a>
+                <a href="user-top.html">Ranking</a>
+                <a href="user-list.html">Usuaris</a>
+                <a href="user-delete.html">Baixes</a>
+                <a href="user-scores.html">Resultats</a>
+                <a href="puzzle-list.html">Sopes</a>
+                <a href="puzzle-create.html">Nova sopa</a>
+                <a href="puzzle-delete.html">Baixa sopa</a>
+                <a href="help.html">Ajuda</a>
             </nav>
             <div class="mobile">
-                <a href="wordSearch.html">
+                <a href="admin_wordSearch.html">
                     <img src="../../media/image/login.svg" alt="login" height="24">
                 </a>
             </div>
             <div class="desktop">
-                <a id="login" href="wordSearch.html">
+                <a id="login" href="admin_wordSearch.html">
                     Inicia sesió
                 </a>
             </div>
@@ -104,33 +101,28 @@
     <main>
 
         <section class="full-center">
-            <form action="user-signup.php" method="post">
-                <h1>Crea una conta nova</h1>
-                <label for="userName">Usuari</label>
-                <input required type="text" name="userName" id="userName">
-                <label for="password">Contrasenya</label>
-                <input required type="password" name="password" id="password">
-                <label for="repeatPassword">Repeteix la contrasenya</label>
-                <input required type="password" name="repeatPassword" id="repeatPassword">
-                <label for="name">Nom</label>
-                <input required type="text" name="name" id="name">
-                <label for="surname">Llinatge</label>
-                <input required type="text" name="surname" id="surname">
-                <label for="secondSurname">Segon llinatge (opcional)</label>
-                <input type="text" name="secondSurname" id="secondSurname">
-                <label for="email">Correu electronic</label>
-                <input required type="email" name="email" id="email">
-                <label for="birthday">Data de naixement</label>
-                <input required type="date" name="birthday" id="birthday">
-                <button type="submit">Registra</button>
-            </form>
+            <div class="content">
+                <h1 class="space-md">Baixa d'usuaris</h1>
+                <form method="post" action="user-delete.php">
+                    <label for="user-deletes">Sel·lecciona l'usuari desitjat per donar de baixa</label>
+                    <br>
+                    <select id="user-deletes" name="user-deletes">
+                        <option value="usuari1">Usuari1</option>
+                        <option value="usuari2">Usuari2</option>
+                        <option value="usuari3">Usuari3</option>
+                        <option value="usuari4">Usuari4</option>
+                        <option value="usuari5">Usuari5</option>
+                    </select>
+                    <br>
+                    <button type="submit">Donar de baixa</button>
+                </form>
+            </div>
         </section>
 
     </main>
-
     <!-- ======= Peu de pàgina ======= -->
     <footer>
-        <div class="josep">
+        <div>
             <h2>Josep Fortuny</h2>
             <ul>
                 <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"
@@ -142,7 +134,7 @@
                 <li><a href="mailto:email@example.com">email@example.com</a></li>
             </ul>
         </div>
-        <div class="toni">
+        <div>
             <h2>Toni Riera</h2>
             <ul>
                 <li><a href="https://example.com/"><img src="../../media/image/facebook.svg" alt="facebook"

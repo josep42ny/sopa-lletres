@@ -1,0 +1,34 @@
+version: '1.0'
+name: 'Practica final Josep'
+
+services:
+  # Frontend: Pàgines estàtiques servides per Apache
+  apache:
+    image: httpd:2.4
+    ports: 80:80
+    volumes: ./wordsearch_front:/usr/local/apache2/htdocs/
+
+  # Backend: API REST en Node.js (us la passarem aqui)
+  node:
+    image: node:16
+    expose: 3000
+    ports: 3000:3000
+    working_dir: /home/node/app
+    volumes: ./wordsearch_front:/home/node/app
+    command: "npm start"
+
+  # Base de dades: MariaDB amb phpMyAdmin per administració
+  db:
+    image: mariadb:10.7
+  # Base de dades (MariaDB):
+  # Utilitza la versió 10.7 de la imatge oficial
+  # Configuració mínima:
+  # Contrasenya de root: cifproot
+  # Base de dades creada automàticament: practicadaw
+  # Persistent storage: monta ./volums/mysql al directori adequat de MariaDB
+  # phpMyAdmin:
+  # Conecta automàticament amb el contenidor de la BBDD
+  # Accessible via port 8083 de la màquina host
+  # Entregables:
+  # Arxiu docker-compose.yml que compleixi tots els requisits
+  # (Opcional) Comandes per crear els directoris necessaris i executar els contenidors

@@ -1,34 +1,44 @@
-version: '1.0'
-name: 'Practica final Josep'
+version: '3'
+name: 'docker-josep'
 
 services:
   # Frontend: Pàgines estàtiques servides per Apache
   apache:
     image: httpd:2.4
-    ports: 80:80
-    volumes: ./wordsearch_front:/usr/local/apache2/htdocs/
+    ports:
+      - 80:80
+    volumes:
+      - ./wordsearch_front:/usr/local/apache2/htdocs/
 
   # Backend: API REST en Node.js (us la passarem aqui)
   node:
     image: node:16
-    expose: 3000
-    ports: 3000:3000
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
     working_dir: /home/node/app
-    volumes: ./wordsearch_front:/home/node/app
+    volumes:
+      - ./wordsearch_back:/home/node/app
     command: "npm start"
 
-  # Base de dades: MariaDB amb phpMyAdmin per administració
+  # Base de dades (MariaDB):
   db:
     image: mariadb:10.7
-  # Base de dades (MariaDB):
-  # Utilitza la versió 10.7 de la imatge oficial
-  # Configuració mínima:
-  # Contrasenya de root: cifproot
-  # Base de dades creada automàticament: practicadaw
-  # Persistent storage: monta ./volums/mysql al directori adequat de MariaDB
+    environment:
+      - MYSQL_ROOT_PASSWORD=cifproot
+      - MYSQL_DATABASE=practicadaw
+    volumes:
+      - ./volums/mysql:/var/lib/mysql
+    expose:
+      - 3306
+
   # phpMyAdmin:
-  # Conecta automàticament amb el contenidor de la BBDD
-  # Accessible via port 8083 de la màquina host
-  # Entregables:
-  # Arxiu docker-compose.yml que compleixi tots els requisits
-  # (Opcional) Comandes per crear els directoris necessaris i executar els contenidors
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_HOST=db
+    ports:
+      - 8083:80
+    depends_on:
+      - db

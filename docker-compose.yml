@@ -1,5 +1,5 @@
 version: '3'
-name: 'docker-josep'
+name: 'docker-toni-josep'
 
 services:
   # Frontend: Pàgines estàtiques servides per Apache

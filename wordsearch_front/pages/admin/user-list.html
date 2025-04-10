@@ -9,7 +9,7 @@
     <title>Consulta d'usuaris</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
-    <script src="../../js/script.js" defer></script>
+    <script type="module" src="../../js/user-list.js" defer></script>
 </head>
 
 <body class="admin">
@@ -71,7 +71,7 @@
             </div>
             <div>
                 <a href="../../index.html">
-                    <img src="../../media/image/logo.svg" alt="logo" height="32">
+                    <img src="../../media/image/Logo.svg" alt="Logo" height="32">
                 </a>
             </div>
             <nav class="desktop">
@@ -103,88 +103,7 @@
         <section>
             <div class="content space-top-xl">
                 <h1 class="space-md">Consulta d'usuaris</h1>
-                <table class="ranking-table">
-                    <tr>
-                        <th>Nom d'usuari</th>
-                        <th>Nom i llinatges</th>
-                        <th>Contrassenya</th>
-                    </tr>
-                    <tr>
-                        <td>Toni</td>
-                        <td>Toni Riera</td>
-                        <td>12345678</td>
-                    </tr>
-                    <tr>
-                        <td>Anna</td>
-                        <td>Anna Garcia</td>
-                        <td>password123</td>
-                    </tr>
-                    <tr>
-                        <td>Marc</td>
-                        <td>Marc Martinez</td>
-                        <td>marc12345</td>
-                    </tr>
-                    <tr>
-                        <td>Jordi</td>
-                        <td>Jordi Puig</td>
-                        <td>jordi2022</td>
-                    </tr>
-                    <tr>
-                        <td>Marta</td>
-                        <td>Marta Lopez</td>
-                        <td>martaPassword</td>
-                    </tr>
-                    <tr>
-                        <td>Laia</td>
-                        <td>Laia Serrano</td>
-                        <td>laia1234</td>
-                    </tr>
-                    <tr>
-                        <td>Roger</td>
-                        <td>Roger Torres</td>
-                        <td>roger2023</td>
-                    </tr>
-                    <tr>
-                        <td>David</td>
-                        <td>David Ruiz</td>
-                        <td>davidPass!</td>
-                    </tr>
-                    <tr>
-                        <td>Eva</td>
-                        <td>Eva Moreno</td>
-                        <td>eva2022!</td>
-                    </tr>
-                    <tr>
-                        <td>Oriol</td>
-                        <td>Oriol Valls</td>
-                        <td>oriolPassword</td>
-                    </tr>
-                    <tr>
-                        <td>Marina</td>
-                        <td>Marina Ruiz</td>
-                        <td>marina123!</td>
-                    </tr>
-                    <tr>
-                        <td>Júlia</td>
-                        <td>Júlia Soler</td>
-                        <td>julia456!</td>
-                    </tr>
-                    <tr>
-                        <td>Àlex</td>
-                        <td>Àlex Blasco</td>
-                        <td>alex789!</td>
-                    </tr>
-                    <tr>
-                        <td>Gemma</td>
-                        <td>Gemma Pons</td>
-                        <td>gemma2023!</td>
-                    </tr>
-                    <tr>
-                        <td>Xavi</td>
-                        <td>Xavi Roca</td>
-                        <td>xaviPassword!</td>
-                    </tr>
-                </table>
+                <table id="userTable" class="ranking-table"> </table>
             </div>
         </section>
 

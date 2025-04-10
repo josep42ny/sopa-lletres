@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <title>Registre</title>
     <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
-    <script src="/js/script.js" defer></script>
+    <script src="../../js/script.js" defer></script>
 </head>
 
 <body>
@@ -76,7 +76,7 @@
             </div>
             <div>
                 <a href="../../index.html">
-                    <img src="../../media/image/logoipsum-284.svg" alt="logo" height="32">
+                    <img src="../../media/image/logo.svg" alt="logo" height="32">
                 </a>
             </div>
             <nav class="desktop">
@@ -104,7 +104,7 @@
     <main>
 
         <section class="full-center">
-            <form action="user-signup.php" method="post">
+            <form id="userSignup" action="#" method="post">
                 <h1>Crea una conta nova</h1>
                 <label for="userName">Usuari</label>
                 <input required type="text" name="userName" id="userName">
@@ -124,6 +124,7 @@
                 <input required type="date" name="birthday" id="birthday">
                 <button type="submit">Registra</button>
             </form>
+            <div id="hello"></div>
         </section>
 
     </main>

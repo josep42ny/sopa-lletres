@@ -1,4 +1,4 @@
-import select from './functions.js';
+import { select } from './functions.js';
 
 const array = await select('select * from User');
 

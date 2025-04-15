@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../../css/style.css">
     <meta name="description" content="Sopa de lletres">
     <title>Sopa de lletres</title>
-    <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
-    <script src="../../js/script.js" defer></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <script type="module" src="../../js/wordSearch.js" defer></script>
+    <script src="../../js/sidebar.js" defer></script>
 </head>
 
 <body>
@@ -59,7 +60,7 @@
                 <img src="../../media/image/gear.svg" alt="settigns" width="20">
                 Configuració
             </a>
-            <a href="user-admin-help.html">
+            <a href="user-help.html">
                 <img src="../../media/image/help.svg" alt="help" width="20">
                 Informació i ajuda
             </a>
@@ -85,7 +86,7 @@
                 <a href="contact.html">Contacte</a>
                 <a href="map.html">Mapa</a>
                 <a href="user-config.html">Configuració</a>
-                <a href="user-admin-help.html">Ajuda</a>
+                <a href="user-help.html">Ajuda</a>
             </nav>
             <div class="mobile">
                 <a href="wordSearch.html">
@@ -105,12 +106,12 @@
 
         <section class="divider full-center">
             <div class="content">
-                <form action="#" method="post">
+                <form id="sign_in" method="post">
                     <h1>Hola de nou!</h1>
                     <label for="userName">Usuari</label>
                     <input required type="text" name="userName" id="userName">
                     <label for="password">Contrasenya</label>
-                    <input required type="password" name="password" id="password" minlength="8">
+                    <input required type="password" name="password" id="password">
                     <button type="submit">Inicia sessió</button>
                     <small><a href="user-signup.html" class="nolink">No tens conta? Registra</a></small>
                 </form>

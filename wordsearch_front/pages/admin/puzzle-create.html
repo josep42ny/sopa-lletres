@@ -8,8 +8,9 @@
     <meta name="description" content="Sopa de lletres">
     <title>Sopa de lletres</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
-    <script src="../../js/script.js" defer></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <script type="module" src="../../js/puzzle-create.js" defer></script>
+    <script src="../../js/sidebar.js" defer></script>
 </head>
 
 <body class="admin">
@@ -106,16 +107,7 @@
                     <h1 class="space-md">Crea una sopa de lletres</h1>
                     <label for="nom-sopa">Introduir el nom de la sopa de lletres</label>
                     <input required type="text" id="nom-sopa" name="nom-sopa">
-                    <label for="dificultat">Nivell de dificultat</label>
-                    <label>
-                        <input required type="radio" id="dificultat" name="dificultat" value="easy"> Fàcil
-                    </label>
-                    <label>
-                        <input required type="radio" name="dificultat" value="normal"> Intermitg
-                    </label>
-                    <label>
-                        <input required type="radio" name="dificultat" value="hard"> Difícil
-                    </label>
+                    <div id="difficulty"></div>
                     <label for="paraules">Insereix les paraules de la nova sopa de lletres</label>
                     <div class="words-create">
                         <input required type="text" id="paraules" name="paraula1">
@@ -136,112 +128,112 @@
             <div class="content">
                 <div class="game-board-wrapper space-xl">
                     <div class="game-board">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
-                        <input type="text" maxlength="1" for="createPuzzle">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
+                        <input type="text" maxlength="1" class="letter">
                     </div>
                 </div>
                 <form action="#" class="space-xl">
                     <button type="submit">Desa</button>
-                    <button type="button" class="plain">Emplenar</button>
-                    <button type="reset" class="plain">Reinicia</button>
+                    <button id="fillPuzzle" class="plain">Emplenar</button>
+                    <button id="resetPuzzle" class="plain">Reinicia</button>
                 </form>
             </div>
         </section>

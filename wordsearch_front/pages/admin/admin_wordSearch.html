@@ -8,8 +8,8 @@
     <meta name="description" content="Sopa de lletres">
     <title>Inici admin</title>
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
-    <script src="../../js/script.js" defer></script>
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <script type="module" src="../../js/admin_wordsearch.js" defer></script>
 </head>
 
 <body class="admin">
@@ -29,7 +29,7 @@
         <section class="full-center">
             <div class="content">
                 <h1 class="center">Inicia sessió com a <br>administrador</h1>
-                <form action="#" method="post">
+                <form id="adminLogin" method="post">
                     <label for="userName">Usuari</label>
                     <input required type="text" name="userName" id="userName">
                     <label for="password">Contrasenya</label>

@@ -371,7 +371,15 @@ section.full-center {
     .desktop {
         display: none;
     }
+}
 
+@media (max-width: 800px) {
+    form .grid-half {
+        grid-column: span 12;
+    }
+}
+
+@media (max-width: 700px) {
     .grid-half {
         grid-column: span 12;
     }

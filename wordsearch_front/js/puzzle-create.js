@@ -1,8 +1,41 @@
-import { modify } from "./functions.js";
+import { modify, select } from "./functions.js";
+
+const alphabet = "abcdefghijklmnopqrstuvwxyzç"
+const letters = [...document.querySelectorAll('.letter')];
+
+document.querySelector('#fillPuzzle').addEventListener('click', e => {
+    e.preventDefault();
+
+    for (const letter of letters) {
+        if (letter.value == '' | null) {
+            letter.value = alphabet[Math.floor(Math.random() * alphabet.length)];
+        }
+    }
+});
+
+document.querySelector('#resetPuzzle').addEventListener('click', e => {
+    e.preventDefault();
+
+    for (const letter of letters) {
+        letter.value = '';
+    }
+});
 
 (
     _ => {
-        const letters = [...document.querySelectorAll('.letter')];
+        select('select id, difficulty from Difficulty')
+            .then(rows => {
+                let html = '';
+                for (const row of rows) {
+                    html += `<label><input required type="radio" name="dificultat" value="${row['id']}"> ${row['difficulty']}</label><br>`;
+                }
+                document.querySelector('#difficulty').innerHTML = html;
+            });
+    }
+)();
+
+(
+    _ => {
         let query = 'insert into Letter (puzzleId, letter, posX, posY) values ';
 
         // Guard for incomplete puzzle

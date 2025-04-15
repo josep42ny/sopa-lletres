@@ -120,39 +120,3 @@ insert into Admin values(2);
 insert into Player
 values(1,1,1,1),
 (2,1,1,1);
-
--- Procedures
-
-delimiter //
-
-create procedure checkLogin(
-    in in_username varchar(255),
-    in in_password varchar(255),
-    out user_id int(11)
-) 
-begin
-
-select id as user_id from User where
-username = in_usarname and password = in_password;
-
-end //
-
-delimiter ;
-
-/*    declare done boolean default false;
-    
-    declare cur cursor for select username, password form User;
-
-    declare continue handler  for not found set done = true;
-
-    open cur;
-
-    set user_id = 0;
-
-    log: loop
-
-        fetch cur into 
-
-            if 
-            
-*/

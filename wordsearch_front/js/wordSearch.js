@@ -1,20 +1,20 @@
 import { select } from './functions.js';
 
 const login = document.querySelector("#sign_in");
-form.addEventListener('submit', (e) => {
+login.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(login);
-    const entries = formData.entries();
-    let query = "call checkLogin("
+    let query = `select Player.id from User, Player where User.id = Player.id and username = "${formData.get('userName')}" and password = "${formData.get('password')}";`;
 
-    for (const [key, value] of entries) {
-        query += `'${value}', `
-    }
-
-    query += ');';
-    const lastIndex = query.lastIndexOf(',');
-    query = query.slice(0, lastIndex) + '' + query.slice(lastIndex + 1);
-    console.log(query);
+    select(query)
+        .then(user => {
+            if (user.length != 0) {
+                localStorage.uid = user[0]['id'];
+                window.location.href = "puzzle-select.html"
+            } else {
+                alert("Usuari o contrasenya incorrecta.")
+            }
+        });
 
 }); // TODO: link login a juga, finish logica login;

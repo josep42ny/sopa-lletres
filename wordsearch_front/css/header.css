@@ -1,8 +1,24 @@
+header {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--bd-gray);
+}
+
 header section {
+    flex: 0 1 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
 }
 
 .admin header {
@@ -16,25 +32,28 @@ nav {
     align-items: center;
 }
 
-nav a,
-nav a:visited,
-nav a:active,
-nav a:hover {
+header a,
+header a:visited,
+header a:active,
+header a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 15ch;
     text-decoration: none;
-    font-weight: 700;
     color: var(--heading-color);
+    color: var(--tx-dark);
+
 }
 
-#login {
-    color: white;
-    background-color: #0f0f0f;
+#login,
+#signup {
     border-radius: 0.25em;
+}
+
+#signup {
     padding: 0.5em 1.5em;
+    color: var(--tx-light);
+    background-color: var(--bg-dark);
 }
 
 /* Logo */

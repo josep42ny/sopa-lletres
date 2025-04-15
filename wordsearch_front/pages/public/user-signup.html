@@ -104,27 +104,36 @@
     <main>
 
         <section class="full-center">
-            <form id="userSignup" action="#" method="post">
-                <h1>Crea una conta nova</h1>
-                <label for="userName">Usuari</label>
-                <input required type="text" name="userName" id="userName">
-                <label for="password">Contrasenya</label>
-                <input required type="password" name="password" id="password">
-                <label for="repeatPassword">Repeteix la contrasenya</label>
-                <input required type="password" name="repeatPassword" id="repeatPassword">
-                <label for="name">Nom</label>
-                <input required type="text" name="name" id="name">
-                <label for="surname">Llinatge</label>
-                <input required type="text" name="surname" id="surname">
-                <label for="secondSurname">Segon llinatge (opcional)</label>
-                <input type="text" name="secondSurname" id="secondSurname">
-                <label for="email">Correu electronic</label>
-                <input required type="email" name="email" id="email">
-                <label for="birthday">Data de naixement</label>
-                <input required type="date" name="birthday" id="birthday">
-                <button type="submit">Registra</button>
-            </form>
-            <div id="hello"></div>
+            <div class="content">
+                <form id="userSignup" class="grid" action="#" method="post">
+                    <h1>Crea una conta nova</h1>
+                    <div class="grid-half">
+                        <label for="userName">Usuari</label>
+                        <input required type="text" name="userName" id="userName">
+                    </div>
+                    <div class="grid-half">
+                        <label for="name">Nom</label>
+                        <input required type="text" name="name" id="name">
+                    </div>
+                    <div class="grid-half">
+                        <label for="surname">Llinatge</label>
+                        <input required type="text" name="surname" id="surname">
+                    </div>
+                    <div class="grid-half">
+                        <label for="secondSurname">Segon llinatge (opcional)</label>
+                        <input type="text" name="secondSurname" id="secondSurname">
+                    </div>
+                    <label for="password">Contrasenya</label>
+                    <input required type="password" name="password" id="password">
+                    <label for="repeatPassword">Repeteix la contrasenya</label>
+                    <input required type="password" name="repeatPassword" id="repeatPassword">
+                    <label for="email">Correu electronic</label>
+                    <input required type="email" name="email" id="email">
+                    <label for="birthday">Data de naixement</label>
+                    <input required type="date" name="birthday" id="birthday">
+                    <button type="submit">Registra</button>
+                </form>
+            </div>
         </section>
 
     </main>

@@ -8,4 +8,15 @@
     --border-color: #272343;
     --heading-color: #272343;
     --text-color: #2d334a;
+
+    /* True colors */
+    --tx-dark: #2d2d2d;
+    --tx-light: #ffffff;
+
+    --bd-dark: #2d2d2d;
+    --bd-gray: #dfdfdf;
+    --bd-light: #ffffff;
+
+    --bg-dark: #2d2d2d;
+    --bg-light: #ffffff;
 }

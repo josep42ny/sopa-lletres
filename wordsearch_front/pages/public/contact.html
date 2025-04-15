@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <title>Contacte</title>
     <link rel="icon" href="../../media/image/favicon.ico" type="image/x-icon">
-    <script src="../../js/script.js" defer></script>
+    <script src="../../js/functions.js" defer></script>
 </head>
 
 <body>
@@ -68,35 +68,34 @@
 
     <!-- ======= Capçelera ======= -->
     <header>
-        <section class="divider">
-            <div class="mobile">
-                <a id="sidebarOpen">
-                    <img src="../../media/image/menu.svg" alt="sidebar" height="24">
-                </a>
-            </div>
+        <section>
+
             <div>
                 <a href="../../index.html">
-                    <img src="../../media/image/Logo.svg" alt="Logo" height="32">
+                    <img src="../../media/image/logo.png" alt="logo" height="32">
                 </a>
+                <div class="desktop">
+                    <a href="puzzle-select.html">Juga</a>
+                    <a href="scores.html">Resultats</a>
+                    <a href="contact.html">Contacte</a>
+                    <a href="map.html">Mapa</a>
+                    <a href="user-config.html">Configuració</a>
+                    <a href="user-admin-help.html">Ajuda</a>
+                </div>
             </div>
-            <nav class="desktop">
-                <a href="puzzle-select.html">Juga</a>
-                <a href="scores.html">Resultats</a>
-                <a href="contact.html">Contacte</a>
-                <a href="map.html">Mapa</a>
-                <a href="user-config.html">Configuració</a>
-                <a href="user-admin-help.html">Ajuda</a>
-            </nav>
-            <div class="mobile">
-                <a href="wordSearch.html">
-                    <img src="../../media/image/login.svg" alt="login" height="24">
-                </a>
-            </div>
-            <div class="desktop">
+
+            <div>
                 <a id="login" href="wordSearch.html">
                     Inicia sesió
                 </a>
+                <a id="signup" class="desktop" href="user-signup.html">
+                    Registre
+                </a>
+                <a id="sidebarOpen" class="mobile">
+                    <img src="../../media/image/menu.svg" alt="sidebar" height="24">
+                </a>
             </div>
+
         </section>
     </header>
 
@@ -105,29 +104,45 @@
 
         <section class="full-center">
             <div class="content">
-                <form action="#" method="post">
-                    <h1>Contacte</h1>
-                    <label for="nom">Nom:</label>
-                    <input required type="text" id="nom" name="nom">
-                    <label for="correu">Correu electrònic</label>
-                    <input required type="email" id="correu" name="correu" placeholder="correu@exemple.cat">
-                    <label for="motiu">Motiu del missatge</label>
-                    <select required id="motiu" name="motiu">
-                        <option value selected disabled>Selecciona un</option>
-                        <option value="consulta">Consulta</option>
-                        <option value="error">Error</option>
-                        <option value="millora">Millora</option>
-                        <option value="subscribe">Subscripció</option>
-                    </select>
-                    <label for="telefon">Telèfon</label>
-                    <input required type="tel" id="telefon" name="telefon">
-                    <label for="d-naixement">Data de naixament (opcional)</label>
-                    <input type="date" id="d-naixement" name="d-naixement">
-                    <label for="missatge">Missatge:</label>
-                    <textarea required id="missatge" name="missatge" rows="20" cols="70" maxlength="1500"
-                        placeholder="Redacta la consulta, la posible millora, descriu l'error i com replicarlo..... "></textarea>
-                    <button type="submit">Envia missatge</button>
-                </form>
+                <div class="grid">
+                    <div class="grid-half">
+                        <h1>Contacta amb nosaltres</h1>
+                        <p>Estem aquí per ajudar i respondre qualsevol pregunta que puguis tenir. Esperem saber de tu!
+                        </p>
+                        <p><img src="../../media/image/location-pin.svg" alt="" width="24">Carrer ses Tapareres, 32,
+                            07500
+                            Manacor, Illes
+                            Balears</p>
+                        <p><img src="../../media/image/phone.svg" alt="" width="24">+42 124 A4 34 53</p>
+                        <p><img src="../../media/image/mail.svg" alt="" width="24">info@politecnicllevant.cat</p>
+                    </div>
+
+                    <form class="grid grid-half" action="#" method="post">
+                        <div class="grid grid-half">
+                            <label for="nom">Nom:</label>
+                            <input required type="text" id="nom" name="nom">
+                        </div>
+                        <div class="grid grid-half">
+                            <label for="telefon">Telèfon</label>
+                            <input required type="tel" id="telefon" name="telefon">
+                        </div>
+                        <label for="correu">Correu electrònic</label>
+                        <input required type="email" id="correu" name="correu" placeholder="correu@exemple.cat">
+                        <label for="motiu">Motiu del missatge</label>
+                        <select required id="motiu" name="motiu">
+                            <option value selected disabled>Selecciona un</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="error">Error</option>
+                            <option value="millora">Millora</option>
+                            <option value="subscribe">Subscripció</option>
+                        </select>
+                        <label for="missatge">Missatge:</label>
+                        <textarea required id="missatge" name="missatge" rows="20" maxlength="1500"
+                            placeholder="Redacta la consulta, la posible millora, descriu l'error i com replicarlo..... "></textarea>
+                        <button type="submit">Envia missatge</button>
+                    </form>
+                </div>
+
             </div>
         </section>
 

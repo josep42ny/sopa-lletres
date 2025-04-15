@@ -1,20 +1,4 @@
-.content:has(form) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-form {
-    flex: 0 1 60ch;
-}
-
-form>* {
-    display: block;
-    width: 100%;
-}
-
-form *:not(label) {
+form>*:not(label) {
     margin-bottom: var(--space-md);
 }
 
@@ -32,4 +16,5 @@ select {
     border-radius: 0.15em;
     border: 1px solid gray;
     background-color: white;
+    width: 100%;
 }

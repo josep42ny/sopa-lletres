@@ -1,33 +1,45 @@
 import { select } from './functions.js';
 
-const array = await select('select * from User');
+const users = await select(`
+    select 
+        id as uid,
+        concat(firstName, ' ', lastName, ' ', familyName) as fullName,
+        userName,
+        password,
+        case when exists (select Admin.id from Admin where Admin.id = uid) then 'admin' else 'player' end as role
+    from User
+`);
 
-let html = '<tbody><tr>';
-for (const [key, value] of Object.entries(array[0])) {
-    switch (key) {
-        case 'username':
-        case 'firstName':
-        case 'password':
-            html += `<th>${key}</th>`;
-            break;
-    }
-}
-html += '</tr>';
+let html = `
+    <tbody>
+        <tr>
+            <th>Nom</th>
+            <th>Usuari</th>
+            <th>Contrassenya</th>
+            <th>Rol</th>
+        </tr>
 
-for (const obj of array) {
-    html += '<tr>';
-    for (const [key, value] of Object.entries(obj)) {
-        switch (key) {
-            case 'username':
-            case 'firstName':
-            case 'password':
-                html += `<td>${value}</td>`;
-                break;
-        }
+`;
+
+for (const user of users) {
+    let role = '';
+    if (user.role === 'player') {
+        role = '<span class="chip-green">Jugador</span>';
+    } else {
+        role = '<span class="chip-blue">Admin</span>';
     }
-    html += '</tr>';
+
+    html += `
+        <tr>
+            <td>${user.fullName}</td>
+            <td>${user.userName}</td>
+            <td>${user.password}</td>
+            <td>${role}</td>
+        </tr>
+    `;
 }
 
 html += '</tbody>';
+
 const table = document.querySelector('#userTable');
 table.innerHTML += html;

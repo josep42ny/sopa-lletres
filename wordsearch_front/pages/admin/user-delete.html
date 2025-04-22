@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="icon" href="../../media/image/" type="image/x-icon">
     <script src="../../js/sidebar.js" defer></script>
+    <script type="module" src="../../js/user-delete.js" defer></script>
 </head>
 
 <body class="admin">
@@ -96,17 +97,10 @@
         <section class="full-center">
             <div class="content">
                 <h1 class="space-md">Baixa d'usuaris</h1>
-                <form method="post" action="#">
-                    <label for="user-deletes">Sel·lecciona l'usuari desitjat per donar de baixa</label>
-                    <br>
-                    <select id="user-deletes" name="user-deletes">
-                        <option value="usuari1">Usuari1</option>
-                        <option value="usuari2">Usuari2</option>
-                        <option value="usuari3">Usuari3</option>
-                        <option value="usuari4">Usuari4</option>
-                        <option value="usuari5">Usuari5</option>
+                <form id="userDelete" method="post" action="#">
+                    <label for="userDelete">Sel·lecciona l'usuari desitjat per donar de baixa</label>
+                    <select name="userDelete">
                     </select>
-                    <br>
                     <button type="submit">Donar de baixa</button>
                 </form>
             </div>

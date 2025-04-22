@@ -18,7 +18,7 @@ header section {
 header div {
     display: flex;
     align-items: center;
-    gap: 1.5em;
+    gap: 2.25em;
 }
 
 .admin header {
@@ -40,9 +40,7 @@ header a:hover {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--heading-color);
-    color: var(--tx-dark);
-
+    color: var(--tx-gray);
 }
 
 #login,

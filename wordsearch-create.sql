@@ -35,7 +35,8 @@ create table Player (
     tableColorId int,
     buttonColorId int,
     languageId int,
-    constraint fk_player_user foreign key (id) references User(id),
+    constraint fk_player_user foreign key (id) references User(id)
+    on delete cascade,
     constraint fk_player_tableColor foreign key (tableColorId) references Color(id),
     constraint fk_player_buttonColor foreign key (buttonColorId) references Color(id),
     constraint fk_player_language foreign key (languageId) references Language(id)
@@ -48,10 +49,12 @@ create table Difficulty (
 );
 
 create table Puzzle (
-    id int primary key,
+    id int primary key auto_increment,
+    name varchar(255) not null,
+    description varchar(255),
     authorId int not null,
     difficultyId int not null,
-    dateCreated datetime not null default current_timestamp,
+    dateCreated datetime default current_timestamp,
     constraint fk_puzzle_admin foreign key (authorId) references Admin(id),
     constraint fk_puzzle_difficulty foreign key (difficultyId) references Difficulty(id)
 );
@@ -86,10 +89,11 @@ create table Puzzle_Word (
 create table Puzzle_Player (
     puzzleId int not null,
     playerId int not null,
-    score tinyint unsigned not null,
+    score smallint unsigned not null,
     primary key (puzzleId, playerId),
     constraint fk_puzzle_player_puzzle foreign key (puzzleId) references Puzzle(id),
     constraint fk_puzzle_player_word foreign key (playerId) references Player(id)
+    on delete cascade
 );
 
 
@@ -120,3 +124,13 @@ insert into Admin values(2);
 insert into Player
 values(1,1,1,1),
 (2,1,1,1);
+
+insert into Puzzle (name, authorId, difficultyId)
+values ('Roba d\'estiu', 2, 1),
+('Animals del desert', 2, 3);
+
+insert into Puzzle_Player (puzzleId, playerId, score)
+values (1, 1, 100),
+(1, 2, 200),
+(2, 1, 200),
+(2, 2, 300);

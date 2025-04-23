@@ -1,8 +1,8 @@
 # Word Search Game
 This project implements a mockup word search game with both a frontend and backend.  The frontend provides a user interface for playing the game and managing user accounts, while the backend handles data persistence and game logic.
 
-*Important*
-RESTful API implementation is a security flaw the size of the observable universe, this project is for learning pusposes and should not be taken as an example of anithing near production ready code. 
+__Important__
+This RESTful API implementation is a __security flaw the size of the observable universe__, this project is for learning pusposes and should not be taken as an example of anything in resemblance of production ready code. 
 
 ## Features
 * **Frontend:**
@@ -30,5 +30,3 @@ The frontend is served by an Apache HTTP server, while the backend is a Node.js 
 * **Server:** Apache HTTP Server
 * **Containerization:** Docker Compose
 * **CORS:** CORS middleware to handle cross-origin requests between the frontend and backend.
-
-*README.md was made with [Etchr](https://etchr.dev)*

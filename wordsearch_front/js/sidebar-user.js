@@ -1,9 +1,13 @@
 import { select } from './functions.js';
 const sidebar = document.querySelector("#sidebar");
-const username = document.querySelector("#sidebarAdmin");
+const username = document.querySelector("#sidebarUser");
 
-select(`select User.username from User where User.id = ${localStorage.getItem('aid')}`).then(data => {
-    username.textContent = data[0].username;
+select(`select User.username from User where User.id = ${localStorage.getItem('uid')}`).then(data => {
+    if (data[0] === undefined) {
+
+    } else {
+        username.textContent = data[0].username;
+    }
 });
 
 document.querySelector("#sidebarClose").addEventListener("click", _ => {

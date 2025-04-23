@@ -161,12 +161,12 @@ section:has(.game-bar) {
     justify-content: space-between;
 }
 
-.content:has(#game-words) {
+.content:has(#gameWords) {
     display: flex;
     justify-content: center;
 }
 
-#game-words {
+#gameWords {
     display: grid;
     width: fit-content;
     grid-template-columns: repeat(2, 1fr);
@@ -265,13 +265,13 @@ table.ranking-table * {
     position: fixed;
     top: 0;
     z-index: 1;
-    left: calc(-100vw - 18rem);
+    right: calc(-100vw - 18rem);
     width: 18rem;
     height: 100vh;
     padding: 1.5em;
     background-color: #ffffff;
     box-shadow: 0 0 16px #00000050;
-    transition: left 0.2s;
+    transition: right 0.2s;
 }
 
 aside .top>a:nth-child(2) {

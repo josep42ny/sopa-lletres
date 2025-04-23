@@ -11,14 +11,14 @@ function updatePlayers() {
 
         let html = '';
         if (players.length === 0) {
-            html += `<option value="" disabled selected>No s'han trobat jugadors</option>`
+            html = `<option value="" disabled selected>No s'han trobat jugadors</option>`
         } else {
             for (let player of players) {
                 html += `<option value="${player.id}">${player.username}</option>`;
             }
         }
         const dropdown = document.querySelector('#userDelete select');
-        dropdown.innerHTML += html;
+        dropdown.innerHTML = html;
     });
 }
 

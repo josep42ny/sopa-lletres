@@ -1,9 +1,9 @@
 const sidebar = document.querySelector("#sidebar")
 
 document.querySelector("#sidebarClose").addEventListener("click", _ => {
-    sidebar.style.left = "-100vw";
+    sidebar.style.right = "-100vw";
 });
 
 document.querySelector("#sidebarOpen").addEventListener("click", _ => {
-    sidebar.style.left = "0";
+    sidebar.style.right = "0";
 });

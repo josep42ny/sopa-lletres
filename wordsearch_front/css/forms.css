@@ -8,11 +8,12 @@ textarea {
     resize: vertical;
 }
 
-input,
+input:not([type="radio"], [type="checkbox"]),
 button,
 textarea,
 select {
-    padding: 1em;
+    height: 3em;
+    padding: 0.5em 0.75em;
     border-radius: 0.5em;
     border: 1px solid var(--bd-gray);
     background-color: var(--bg-light);

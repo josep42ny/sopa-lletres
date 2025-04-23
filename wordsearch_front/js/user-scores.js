@@ -5,14 +5,13 @@ const data = await select(`
         puzz.name,
         User.username,
         Puzzle_Player.score,
-        Puzzle_Player.score - (select round(avg(score),2) from Puzzle_Player where Puzzle_Player.puzzleId = puzz.id) as difference
+        Puzzle_Player.score - (select round(avg(score),1) from Puzzle_Player where Puzzle_Player.puzzleId = puzz.id) as difference
     from User, Player, Puzzle_Player, Puzzle as puzz
     where User.id = Player.id
     and Player.id = Puzzle_Player.playerId
     and Puzzle_Player.puzzleId = puzz.id
     order by puzz.name asc, Puzzle_Player.score desc;
 `);
-console.log("🚀 ~ data:", data);
 
 let html = `
     <tbody>

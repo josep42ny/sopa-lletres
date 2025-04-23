@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <script src="../../js/sidebar.js" defer></script>
+    <script type="module" src="../../js/puzzle-list.js" defer></script>
 </head>
 
 <body class="admin">
@@ -97,20 +98,9 @@
         <section class="divider full-center">
             <div class="content">
                 <h1 class="space-md center">Consulta una <br>sopa de lletres</h1>
-                <form action="#" method="post">
-                    <label for="puzzle-list">Triau la sopa de lletres que voleu consultar</label>
-                    <select id="puzzle-list" name="llista-sopa-lletres">
-                        <option value="1">Sopa nº1</option>
-                        <option value="2">Sopa nº2</option>
-                        <option value="3">Sopa nº3</option>
-                        <option value="4">Sopa nº4</option>
-                        <option value="5">Sopa nº5</option>
-                        <option value="6">Sopa nº6</option>
-                        <option value="7">Sopa nº7</option>
-                        <option value="8">Sopa nº8</option>
-                        <option value="9">Sopa nº9</option>
-                        <option value="10">Sopa nº10</option>
-                    </select>
+                <form id="puzzleList" action="#" method="post">
+                    <label for="puzzleId">Triau la sopa de lletres que voleu consultar</label>
+                    <select name="puzzleId"></select>
                     <button type="submit">Consulta</button>
                 </form>
             </div>
@@ -118,8 +108,8 @@
 
         <section class="divider">
             <div class="content">
-                <h1>Nom de la Sopa</h1>
-                <h6>DIFICULTAT MITJA</h6>
+                <h1 id="puzzleName">Nom de la Sopa</h1>
+                <h6 id="puzzleDifficulty">DIFICULTAT MITJA</h6>
             </div>
         </section>
 
@@ -132,7 +122,7 @@
         <section class="orange">
             <div class="content space-top-xl">
                 <div class="game-board-wrapper">
-                    <div class="game-board">
+                    <div id="gameBoard" class="game-board">
                         <div>G</div>
                         <div>J</div>
                         <div>X</div>
@@ -241,7 +231,7 @@
 
         <section class="orange">
             <div class="content space-xl">
-                <div id="game-words">
+                <div id="gameWords">
                     <div>Paraula1</div>
                     <div>Paraula2</div>
                     <div>Paraula3</div>

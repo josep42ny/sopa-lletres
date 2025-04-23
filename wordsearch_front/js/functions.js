@@ -8,4 +8,11 @@ async function modify(query) {
     await fetch("http://localhost:3000/daw/" + encodeURIComponent(query));
 }
 
-export { select, modify };
+function toTitleCase(str) {
+    return str.replace(
+        /\w\S*/g,
+        text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+    );
+}
+
+export { select, modify, toTitleCase };

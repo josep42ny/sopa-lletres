@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <script src="../../js/sidebar.js" defer></script>
+    <script type="module" src="../../js/puzzle-delete.js" defer></script>
 </head>
 
 <body class="admin">
@@ -99,14 +100,7 @@
                 <p class="space-md">
                     Selecciona les sopes que vols eliminar definitivament i clica al botó Elimina.
                 </p>
-                <form action="#" method="post">
-                    <label>Sopa de països <input type="checkbox" name="removeSoup[]" value="countries"></label>
-                    <label>Sopa d'animals <input type="checkbox" name="removeSoup[]" value="animals"></label>
-                    <label>Sopa de llibres <input type="checkbox" name="removeSoup[]" value="books"></label>
-                    <label>Sopa de vacançes <input type="checkbox" name="removeSoup[]" value="holiday"></label>
-                    <label>Sopa de programació <input type="checkbox" name="removeSoup[]" value="coding"></label>
-                    <button type="submit">Elimina</button>
-                </form>
+                <form id="puzzleDelete" action="#" method="post"></form>
             </div>
         </section>
 

@@ -10,6 +10,7 @@
     <title>Consulta de punts</title>
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <script src="../../js/sidebar.js" defer></script>
+    <script type="module" src="../../js/scores.js" defer></script>
 </head>
 
 <body>
@@ -102,32 +103,7 @@
         <section class="orange full-center">
             <div class="content">
                 <h1>Consulta de punts</h1>
-                <table class="ranking-table">
-                    <tr>
-                        <th>Nom</th>
-                        <th>Punts</th>
-                    </tr>
-                    <tr>
-                        <td>🌏 Sopa de països</td>
-                        <td>300</td>
-                    </tr>
-                    <tr>
-                        <td>🐸 Sopa d'animals</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>📚 Sopa de llibres</td>
-                        <td>175</td>
-                    </tr>
-                    <tr>
-                        <td>🩱 Sopa de vacançes</td>
-                        <td>200</td>
-                    </tr>
-                    <tr>
-                        <td>👩‍💻 Sopa de programació</td>
-                        <td>175</td>
-                    </tr>
-                </table>
+                <table id="scores" class="ranking-table"></table>
             </div>
         </section>
 

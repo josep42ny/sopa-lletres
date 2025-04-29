@@ -366,6 +366,18 @@ section.full-center {
     color: hsl(0, 50%, 40%);
 }
 
+input.cell-highlighted {
+    background-color: gainsboro;
+}
+
+input.cell-start {
+    background-color: red;
+}
+
+input.cell-end {
+    background-color: green;
+}
+
 /* ======= Grids ======= */
 .grid {
     display: grid;

@@ -1,59 +1,172 @@
-import { modify, select } from "./functions.js";
+import { select } from "./functions.js";
 
-const alphabet = "abcdefghijklmnopqrstuvwxyzç"
+const validChars = "abcdefghijklmnopqrstuvwxyzç"
 const letters = [...document.querySelectorAll('.letter')];
+let marking = false;
+let inserting = false;
+let inserted = false;
+let fisrtMark;
+let posLast;
+const word = {
+    word: '',
+    start: null,
+    end: null,
+    coords: [],
+};
+let newWord;
+const words = [];
+const wordPlacements = [];
+let yOffsetLast;
+let xOffsetLast;
+const board = document.querySelector('.game-board');
 
-document.querySelector('#fillPuzzle').addEventListener('click', e => {
-    e.preventDefault();
+document.querySelector('#wordAdd').addEventListener('click', _ => {
+    if (!inserting) {
+        board.addEventListener('mousedown', handleMousedown);
+        board.addEventListener('mouseover', handleMouseover);
+        newWord = Object.create(word);
+        newWord.word = document.querySelector('#wordInput').value;
+        inserting = true;
+    }
+    if (inserted) {
+        board.removeEventListener('mousedown', handleMousedown);
+        board.removeEventListener('mouseover', handleMouseover);
+        words.push(newWord);
+        console.log(words)
+        posLast = undefined;
+        inserted = false;
+        inserting = false;
+    }
+});
 
-    for (const letter of letters) {
-        if (letter.value == '' | null) {
-            letter.value = alphabet[Math.floor(Math.random() * alphabet.length)];
+function handleMousedown(element) {
+    element.preventDefault();
+    if (!element.target.classList.contains('letter')) { return; };
+    marking = true;
+    for (let i = 0; i < letters.length; i++) {
+        if (letters[i] === element.target) {
+            fisrtMark = i;
         }
     }
-});
-
-document.querySelector('#resetPuzzle').addEventListener('click', e => {
-    e.preventDefault();
-
-    for (const letter of letters) {
-        letter.value = '';
-    }
-});
-
-(
-    _ => {
-        select('select id, difficulty from Difficulty')
-            .then(rows => {
-                let html = '';
-                for (const row of rows) {
-                    html += `<label><input required type="radio" name="dificultat" value="${row['id']}"> ${row['difficulty']}</label><br>`;
+    let cur;
+    let ind = 0;
+    for (let y = -10; y <= 10; y += 10) {
+        for (let x = -1; x <= 1; x++) {
+            cur = fisrtMark;
+            let valid = true;
+            for (let i = 0; i < newWord.word.length; i++) {
+                if (cur + y + x < 0) {
+                    valid = false;
+                    break;
                 }
-                document.querySelector('#difficulty').innerHTML = html;
-            });
-    }
-)();
-
-(
-    _ => {
-        let query = 'insert into Letter (puzzleId, letter, posX, posY) values ';
-
-        // Guard for incomplete puzzle
-        for (const letter of letters) {
-            if (letter.value === '') {
-                return;
+                cur += y + x;
             }
+            wordPlacements[ind++] = valid ? x + y : null;
         }
-
-        let count = 0;
-        for (let row = 0; row < 10; row++) {
-            for (let col = 0; col < 10; col++) {
-                query += `(1, '${letters[count++].value}', ${col}, ${row}),`;
-            }
-        }
-        const lastIndex = query.lastIndexOf(',');
-        query = query.slice(0, lastIndex) + ';' + query.slice(lastIndex + 1);
-
-        modify(query);
     }
-)();
+};
+document.addEventListener('mouseup', _ => {
+    marking = false;
+});
+function handleMouseover(element) {
+    element.preventDefault();
+    if (!marking) { return; };
+    if (!element.target.classList.contains('letter')) { return; };
+    let hoveringLetter;
+    for (let i = 0; i < letters.length; i++) {
+        if (letters[i] === element.target) {
+            hoveringLetter = i;
+        }
+    }
+
+    let yDifference = (Math.floor(hoveringLetter / 10)) - (Math.floor(fisrtMark / 10));
+    let xDifference = (Math.floor(hoveringLetter % 10)) - (Math.floor(fisrtMark % 10));
+    let yOffset = Math.min(Math.max(yDifference, -1), 1);
+    let xOffset = Math.min(Math.max(xDifference, -1), 1);
+
+    if (((Math.abs(yDifference) === Math.abs(xDifference)) && (Math.abs(yDifference) >= newWord.word.length - 1 || Math.abs(xDifference) >= newWord.word.length - 1))
+        || ((Math.abs(yDifference) >= newWord.word.length - 1 && Math.abs(xDifference) === 0) || (Math.abs(xDifference) >= newWord.word.length - 1 && Math.abs(yDifference) === 0))) {
+        clearWord(posLast, yOffsetLast, xOffsetLast);
+        fillWord(yOffset, xOffset);
+        drawWords();
+        drawWord(newWord);
+
+        yOffsetLast = yOffset;
+        xOffsetLast = xOffset;
+        posLast = fisrtMark;
+    }
+};
+function fillWord(yOffset, xOffset) {
+    if (yOffset === undefined || xOffset === undefined) {
+        return;
+    }
+    newWord.coords = [];
+    let offset = xOffset + yOffset * 10;
+    let end = fisrtMark;
+    for (let i = 0; i < newWord.word.length; i++) {
+        newWord.coords.push(end);
+        end += offset;
+    }
+    newWord.start = fisrtMark;
+    newWord.end = end - offset;
+    inserted = true;
+}
+
+function drawWords() {
+    for (let word of words) {
+        drawWord(word);
+    }
+}
+
+function drawWord(word) {
+    const le = word.word.split('');
+    let letter = 0;
+    for (let coord of word.coords) {
+        letters[coord].value = le[letter++];
+        letters[coord].classList.add('cell-highlighted');
+        letters[coord].disabled = true;
+    }
+}
+
+function clearWord(pos, yOffset, xOffset) {
+    if (yOffset === undefined || xOffset === undefined || pos === undefined) {
+        return;
+    }
+
+    let change = xOffset + yOffset * 10;
+    let cur = pos;
+    for (let i = 0; i < newWord.word.length; i++) {
+        letters[cur].classList.remove('cell-highlighted');
+        letters[cur].value = '';
+        letters[cur].disabled = false;
+        cur += change;
+    }
+}
+document.querySelector('#fillPuzzle').addEventListener('click', _ => fillPuzzle(letters));
+document.querySelector('#resetPuzzle').addEventListener('click', _ => resetPuzzle(letters));
+
+select('select id, difficulty from Difficulty')
+    .then(rows => {
+        let html = '';
+        for (const row of rows) {
+            html += `<label><input required type="radio" name="dificultat" value="${row['id']}"> ${row['difficulty']}</label><br>`;
+        }
+        document.querySelector('#difficulty').innerHTML = html;
+    });
+
+function resetPuzzle(cells) {
+    for (const cell of cells) {
+        cell.value = '';
+        cell.classList = 'letter';
+    }
+    drawWords();
+    inserted = false;
+}
+
+function fillPuzzle(cells) {
+    for (const cell of cells) {
+        if (cell.value.trim() === '') {
+            cell.value = validChars[Math.floor(Math.random() * validChars.length)];
+        }
+    }
+}

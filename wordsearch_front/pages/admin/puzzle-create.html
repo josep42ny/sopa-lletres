@@ -102,19 +102,11 @@
                     <label for="nom-sopa">Introduir el nom de la sopa de lletres</label>
                     <input required type="text" id="nom-sopa" name="nom-sopa">
                     <div id="difficulty"></div>
-                    <label for="paraules">Insereix les paraules de la nova sopa de lletres</label>
+                    <label for="wordInput">Insereix les paraules de la nova sopa de lletres</label>
                     <div class="words-create">
-                        <input required type="text" id="paraules" name="paraula1">
-                        <input required type="text" name="paraula2">
-                        <input required type="text" name="paraula3">
-                        <input required type="text" name="paraula4">
-                        <input required type="text" name="paraula5">
-                        <input required type="text" name="paraula6">
-                        <input required type="text" name="paraula7">
-                        <input required type="text" name="paraula8">
-                        <input required type="text" name="paraula9">
-                        <input required type="text" name="paraula10">
+                        <input required type="text" id="wordInput" name="word">
                     </div>
+                    <button type="button" id="wordAdd" class="plain">Inserir</button>
                 </form>
             </div>
         </section>
@@ -226,8 +218,8 @@
                 </div>
                 <form action="#" class="space-xl">
                     <button type="submit">Desa</button>
-                    <button id="fillPuzzle" class="plain">Emplenar</button>
-                    <button id="resetPuzzle" class="plain">Reinicia</button>
+                    <button type="button" id="fillPuzzle" class="plain">Emplenar</button>
+                    <button type="button" id="resetPuzzle" class="plain">Reinicia</button>
                 </form>
             </div>
         </section>

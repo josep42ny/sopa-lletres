@@ -19,8 +19,9 @@ const wordPlacements = [];
 let yOffsetLast;
 let xOffsetLast;
 
-document.querySelector('#fillPuzzle').addEventListener('click', _ => fillPuzzle());
-document.querySelector('#resetPuzzle').addEventListener('click', _ => resetPuzzle());
+document.querySelector('#submit').addEventListener('click', _ => handleSend);
+document.querySelector('#fillPuzzle').addEventListener('click', _ => fillPuzzle);
+document.querySelector('#resetPuzzle').addEventListener('click', _ => resetPuzzle);
 document.addEventListener('mouseup', _ => marking = false);
 document.querySelector('#wordAdd').addEventListener('click', _ => {
     if (!inserting) {
@@ -192,5 +193,17 @@ function fillPuzzle() {
         if (cell.value.trim() === '') {
             cell.value = validChars[Math.floor(Math.random() * validChars.length)];
         }
+    }
+}
+
+function handleSend() {
+    let query = '';
+    if (words.length < 10) {
+        return;
+    }
+    for (const word of words) {
+        query += `(${word.word}, ${word.coords[0]}, ${word.coords[word.coords.length]})`;
+        word.coords[0]
+
     }
 }

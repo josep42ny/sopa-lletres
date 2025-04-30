@@ -2,15 +2,15 @@ import { select } from "./functions.js";
 
 const validChars = "abcdefghijklmnopqrstuvwxyzç"
 const letters = [...document.querySelectorAll('.letter')];
-let marking = false;
-let inserting = false;
-let inserted = false;
+const wordList = document.querySelector('#wordList');
+const board = document.querySelector('.game-board');
+let marking;
+let inserting;
+let inserted;
 let fisrtMark;
 let posLast;
 const word = {
     word: '',
-    start: null,
-    end: null,
     coords: [],
 };
 let newWord;
@@ -18,8 +18,10 @@ const words = [];
 const wordPlacements = [];
 let yOffsetLast;
 let xOffsetLast;
-const board = document.querySelector('.game-board');
 
+document.querySelector('#fillPuzzle').addEventListener('click', _ => fillPuzzle());
+document.querySelector('#resetPuzzle').addEventListener('click', _ => resetPuzzle());
+document.addEventListener('mouseup', _ => marking = false);
 document.querySelector('#wordAdd').addEventListener('click', _ => {
     if (!inserting) {
         board.addEventListener('mousedown', handleMousedown);
@@ -32,12 +34,20 @@ document.querySelector('#wordAdd').addEventListener('click', _ => {
         board.removeEventListener('mousedown', handleMousedown);
         board.removeEventListener('mouseover', handleMouseover);
         words.push(newWord);
-        console.log(words)
+        drawWordList();
+        console.table(words);
         posLast = undefined;
-        inserted = false;
         inserting = false;
+        inserted = false;
     }
 });
+
+wordList.addEventListener('click', handleWordDeletion);
+function handleWordDeletion(event) {
+    if (event.target.type === 'button') {
+        deleteWord(event.target.value)
+    }
+}
 
 function handleMousedown(element) {
     element.preventDefault();
@@ -65,9 +75,7 @@ function handleMousedown(element) {
         }
     }
 };
-document.addEventListener('mouseup', _ => {
-    marking = false;
-});
+
 function handleMouseover(element) {
     element.preventDefault();
     if (!marking) { return; };
@@ -96,6 +104,25 @@ function handleMouseover(element) {
         posLast = fisrtMark;
     }
 };
+
+function drawWordList() {
+    let html = '';
+    for (const [index, word] of words.entries()) {
+        html += `<li>${word.word} <button type="button" class="text-red" value="${index}">X</button></li>`
+    }
+    wordList.innerHTML = html;
+}
+
+function deleteWord(index) {
+    const deleted = words.splice(index, 1)[0];
+    for (let index of deleted.coords) {
+        letters[index].value = '';
+        letters[index].classList = '';
+    }
+    drawWords();
+    drawWordList();
+}
+
 function fillWord(yOffset, xOffset) {
     if (yOffset === undefined || xOffset === undefined) {
         return;
@@ -107,8 +134,6 @@ function fillWord(yOffset, xOffset) {
         newWord.coords.push(end);
         end += offset;
     }
-    newWord.start = fisrtMark;
-    newWord.end = end - offset;
     inserted = true;
 }
 
@@ -142,8 +167,7 @@ function clearWord(pos, yOffset, xOffset) {
         cur += change;
     }
 }
-document.querySelector('#fillPuzzle').addEventListener('click', _ => fillPuzzle(letters));
-document.querySelector('#resetPuzzle').addEventListener('click', _ => resetPuzzle(letters));
+
 
 select('select id, difficulty from Difficulty')
     .then(rows => {
@@ -154,8 +178,8 @@ select('select id, difficulty from Difficulty')
         document.querySelector('#difficulty').innerHTML = html;
     });
 
-function resetPuzzle(cells) {
-    for (const cell of cells) {
+function resetPuzzle() {
+    for (const cell of letters) {
         cell.value = '';
         cell.classList = 'letter';
     }
@@ -163,8 +187,8 @@ function resetPuzzle(cells) {
     inserted = false;
 }
 
-function fillPuzzle(cells) {
-    for (const cell of cells) {
+function fillPuzzle() {
+    for (const cell of letters) {
         if (cell.value.trim() === '') {
             cell.value = validChars[Math.floor(Math.random() * validChars.length)];
         }

@@ -109,6 +109,37 @@ button.small {
     padding: 0 0.5em;
 }
 
+button.delete {
+    background-color: transparent;
+    border: 0;
+    height: 2em;
+    padding: 0 0.5em;
+    color: darkred;
+    box-shadow: unset;
+}
+
+button.delete:hover {
+    color: red;
+}
+
+button.delete:active {
+    translate: 0;
+}
+
+button.discrete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    padding: 0 0.5em;
+    background-color: #ffffff;
+}
+
+input.discrete {
+    height: 2em;
+    padding: 0 0.5em;
+}
+
 /* ======= Taules de sopes ======= */
 .content:has(> .game-board-wrapper) {
     display: flex;
@@ -149,6 +180,7 @@ button.small {
     width: 1.5em;
     height: 1.5em;
     padding: 0 0.25em;
+    border: 1px solid var(--bd-gray);
 }
 
 section:has(.game-bar) {
@@ -324,12 +356,6 @@ aside .bottom>a {
     color: var(--text-color);
 }
 
-.words-create {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15ch, 45%));
-    gap: 1em;
-}
-
 section.full-center {
     min-height: 90vh;
     justify-content: center;
@@ -367,7 +393,9 @@ section.full-center {
 }
 
 input.cell-highlighted {
-    background-color: gainsboro;
+    background-color: var(--bg-highlight-dim);
+    border: 1px solid var(--bd-gray);
+    color: var(--tx-dark);
 }
 
 input.cell-start {
@@ -377,6 +405,7 @@ input.cell-start {
 input.cell-end {
     background-color: green;
 }
+
 
 /* ======= Grids ======= */
 .grid {
@@ -395,6 +424,30 @@ input.cell-end {
 
 .grid-half {
     grid-column: span 6;
+}
+
+.grid-8 {
+    grid-column: span 8;
+}
+
+.grid-4 {
+    grid-column: span 4;
+}
+
+.grid-center {
+    justify-self: center;
+    align-self: center;
+}
+
+.puzzle-create-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.puzzle-create-buttons>div {
+    display: flex;
+    gap: 0.5em;
 }
 
 /* ======= Media querys ======= */

@@ -16,8 +16,9 @@
 
     --bd-dark: #2d2d2d;
     --bd-gray: #dfdfdf;
-    --bd-light: #ffffff;
+    --bd-light: #f5f5f5;
 
     --bg-dark: #2d2d2d;
+    --bg-highlight-dim: #f3cf9c;
     --bg-light: #ffffff;
 }

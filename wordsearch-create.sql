@@ -68,8 +68,7 @@ create table Letter (
     id int not null auto_increment,
     puzzleId int not null,
     letter varchar(255) not null,
-    posX tinyint unsigned not null,
-    posY tinyint unsigned not null,
+    pos tinyint not null,
     primary key (id, puzzleId),
     constraint fk_letter_puzzle foreign key (puzzleId) references Puzzle(id)
     on delete cascade
@@ -78,10 +77,8 @@ create table Letter (
 create table Puzzle_Word (
     puzzleId int not null,
     wordId int not null,
-    startX tinyint unsigned not null,
-    endX tinyint unsigned not null,
-    startY tinyint unsigned not null,
-    endY tinyint unsigned not null,
+    start tinyint unsigned not null,
+    end tinyint unsigned not null,
     primary key (puzzleId, wordId),
     constraint fk_puzzle_word_puzzle foreign key (puzzleId) references Puzzle(id)
     on delete cascade,
@@ -138,108 +135,108 @@ values (1, 1, 100),
 (2, 1, 200),
 (2, 2, 300);
 
-insert into Letter (puzzleId, letter, posX, posY)
+insert into Letter (puzzleId, letter, pos)
 values
-(1, 'a', 0, 0),
-(1, 'b', 1, 0),
-(1, 'c', 2, 0),
-(1, 'd', 3, 0),
-(1, 'e', 4, 0),
-(1, 'f', 5, 0),
-(1, 'g', 6, 0),
-(1, 'h', 7, 0),
-(1, 'i', 8, 0),
-(1, 'j', 9, 0),
-(1, 'k', 0, 1),
-(1, 'l', 1, 1),
-(1, 'm', 2, 1),
-(1, 'n', 3, 1),
-(1, 'o', 4, 1),
-(1, 'p', 5, 1),
-(1, 'q', 6, 1),
-(1, 'r', 7, 1),
-(1, 's', 8, 1),
-(1, 't', 9, 1),
-(1, 'u', 0, 2),
-(1, 'v', 1, 2),
-(1, 'w', 2, 2),
-(1, 'x', 3, 2),
-(1, 'y', 4, 2),
-(1, 'z', 5, 2),
-(1, 'a', 6, 2),
-(1, 'b', 7, 2),
-(1, 'c', 8, 2),
-(1, 'd', 9, 2),
-(1, 'e', 0, 3),
-(1, 'f', 1, 3),
-(1, 'g', 2, 3),
-(1, 'h', 3, 3),
-(1, 'i', 4, 3),
-(1, 'j', 5, 3),
-(1, 'k', 6, 3),
-(1, 'l', 7, 3),
-(1, 'm', 8, 3),
-(1, 'n', 9, 3),
-(1, 'o', 0, 4),
-(1, 'p', 1, 4),
-(1, 'q', 2, 4),
-(1, 'r', 3, 4),
-(1, 's', 4, 4),
-(1, 't', 5, 4),
-(1, 'u', 6, 4),
-(1, 'v', 7, 4),
-(1, 'w', 8, 4),
-(1, 'x', 9, 4),
-(1, 'y', 0, 5),
-(1, 'z', 1, 5),
-(1, 'a', 2, 5),
-(1, 'b', 3, 5),
-(1, 'c', 4, 5),
-(1, 'd', 5, 5),
-(1, 'e', 6, 5),
-(1, 'f', 7, 5),
-(1, 'g', 8, 5),
-(1, 'h', 9, 5),
-(1, 'i', 0, 6),
-(1, 'j', 1, 6),
-(1, 'k', 2, 6),
-(1, 'l', 3, 6),
-(1, 'm', 4, 6),
-(1, 'n', 5, 6),
-(1, 'o', 6, 6),
-(1, 'p', 7, 6),
-(1, 'q', 8, 6),
-(1, 'r', 9, 6),
-(1, 's', 0, 7),
-(1, 't', 1, 7),
-(1, 'u', 2, 7),
-(1, 'v', 3, 7),
-(1, 'w', 4, 7),
-(1, 'x', 5, 7),
-(1, 'y', 6, 7),
-(1, 'z', 7, 7),
-(1, 'a', 8, 7),
-(1, 'b', 9, 7),
-(1, 'c', 0, 8),
-(1, 'd', 1, 8),
-(1, 'e', 2, 8),
-(1, 'f', 3, 8),
-(1, 'g', 4, 8),
-(1, 'h', 5, 8),
-(1, 'i', 6, 8),
-(1, 'j', 7, 8),
-(1, 'k', 8, 8),
-(1, 'l', 9, 8),
-(1, 'm', 0, 9),
-(1, 'n', 1, 9),
-(1, 'o', 2, 9),
-(1, 'p', 3, 9),
-(1, 'q', 4, 9),
-(1, 'r', 5, 9),
-(1, 's', 6, 9),
-(1, 't', 7, 9),
-(1, 'u', 8, 9),
-(1, 'v', 9, 9);
+(1, 'a', 0),
+(1, 'b', 1),
+(1, 'c', 2),
+(1, 'd', 3),
+(1, 'e', 4),
+(1, 'f', 5),
+(1, 'g', 6),
+(1, 'h', 7),
+(1, 'i', 8),
+(1, 'j', 9),
+(1, 'k', 10),
+(1, 'l', 11),
+(1, 'm', 12),
+(1, 'n', 13),
+(1, 'o', 14),
+(1, 'p', 15),
+(1, 'q', 16),
+(1, 'r', 17),
+(1, 's', 18),
+(1, 't', 19),
+(1, 'u', 20),
+(1, 'v', 21),
+(1, 'w', 22),
+(1, 'x', 23),
+(1, 'y', 24),
+(1, 'z', 25),
+(1, 'a', 26),
+(1, 'b', 27),
+(1, 'c', 28),
+(1, 'd', 29),
+(1, 'e', 30),
+(1, 'f', 31),
+(1, 'g', 32),
+(1, 'h', 33),
+(1, 'i', 34),
+(1, 'j', 35),
+(1, 'k', 36),
+(1, 'l', 37),
+(1, 'm', 38),
+(1, 'n', 39),
+(1, 'o', 40),
+(1, 'p', 41),
+(1, 'q', 42),
+(1, 'r', 43),
+(1, 's', 44),
+(1, 't', 45),
+(1, 'u', 46),
+(1, 'v', 47),
+(1, 'w', 48),
+(1, 'x', 49),
+(1, 'y', 50),
+(1, 'z', 51),
+(1, 'a', 52),
+(1, 'b', 53),
+(1, 'c', 54),
+(1, 'd', 55),
+(1, 'e', 56),
+(1, 'f', 57),
+(1, 'g', 58),
+(1, 'h', 59),
+(1, 'i', 60),
+(1, 'j', 61),
+(1, 'k', 62),
+(1, 'l', 63),
+(1, 'm', 64),
+(1, 'n', 65),
+(1, 'o', 66),
+(1, 'p', 67),
+(1, 'q', 68),
+(1, 'r', 69),
+(1, 's', 70),
+(1, 't', 71),
+(1, 'u', 72),
+(1, 'v', 73),
+(1, 'w', 74),
+(1, 'x', 75),
+(1, 'y', 76),
+(1, 'z', 77),
+(1, 'a', 78),
+(1, 'b', 79),
+(1, 'c', 80),
+(1, 'd', 81),
+(1, 'e', 82),
+(1, 'f', 83),
+(1, 'g', 84),
+(1, 'h', 85),
+(1, 'i', 86),
+(1, 'j', 87),
+(1, 'k', 88),
+(1, 'l', 89),
+(1, 'm', 90),
+(1, 'n', 91),
+(1, 'o', 92),
+(1, 'p', 93),
+(1, 'q', 94),
+(1, 'r', 95),
+(1, 's', 96),
+(1, 't', 97),
+(1, 'u', 98),
+(1, 'v', 99);
 
 insert into Word (word)
 values ('anec'),
@@ -293,14 +290,68 @@ values ('anec'),
 ('carn'),
 ('fruita');
 
-insert into Puzzle_Word (puzzleId, wordId, startX, endX, startY, endY)
-values (1, 1, 1, 1, 1, 1),
-(1, 2, 1, 1, 1, 1),
-(1, 3, 1, 1, 1, 1),
-(1, 4, 1, 1, 1, 1),
-(1, 5, 1, 1, 1, 1),
-(1, 6, 1, 1, 1, 1),
-(1, 7, 1, 1, 1, 1),
-(1, 8, 1, 1, 1, 1),
-(1, 9, 1, 1, 1, 1),
-(1, 10, 1, 1, 1, 1);
+insert into Puzzle_Word (puzzleId, wordId, start, end)
+values (1, 1, 1, 1),
+(1, 2, 1, 1),
+(1, 3, 1, 1),
+(1, 4, 1, 1),
+(1, 5, 1, 1),
+(1, 6, 1, 1),
+(1, 7, 1, 1),
+(1, 8, 1, 1),
+(1, 9, 1, 1),
+(1, 10, 1, 1);
+
+delimiter //
+
+
+create procedure createPuzzle(
+       in id_difuculty int(11),
+       id_puzzle int(11),
+       id_author int(11),
+       description varchar(255),
+       name varchar(255),
+       word varchar(255),
+       start tinyint(3),
+       end tinyint(3),
+       letterIN varchar(255),
+       pos tinyint(4)
+)
+begin
+
+    declare doneWord boolean default false;
+    declare doneWPos boolean default false;
+    declare doneLetter boolean default false;
+
+    declare curWord cursor for words from temp;
+    declare curWPos cursor for words from temp;
+    declare curLetter cursor for letter from temp;
+
+    declare continue handler
+    for not found set doneWord = true;
+    declare continue handler
+    for not found set doneWPos = true;
+    declare continue handler
+    for not found set doneLetter = true;
+
+
+    open curWord;
+
+    insert into Word(word)
+    values (substring_index(temp.words, "-", 1));
+
+
+
+    insert into Letter(puzzleId, letter, pos)
+     
+
+
+    insert into Puzzle_Word()
+
+    
+
+
+    insert into Puzzle()
+end;
+delimiter ;
+

@@ -2,16 +2,16 @@ form>*:not(label) {
     margin-bottom: var(--space-md);
 }
 
-textarea {
+form textarea {
     height: 5em;
     min-height: 5em;
     resize: vertical;
 }
 
-input:not([type="radio"], [type="checkbox"]),
-button,
-textarea,
-select {
+form input:not([type="radio"], [type="checkbox"]),
+form button,
+form textarea,
+form select {
     height: 3em;
     padding: 0.5em 0.75em;
     border-radius: 0.5em;

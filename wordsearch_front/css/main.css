@@ -1,0 +1,24 @@
+@import url(configs.css);
+@import url(reset.css);
+
+body {
+    font-family: var(--ft-base);
+    font-size: var(--ft-400);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--ft-accent);
+}
+
+.content {
+    width: min(100% - 3rem, 160rem);
+    margin-inline: auto;
+}
+
+.flow>*+* {
+    margin-top: 1.6em;
+}

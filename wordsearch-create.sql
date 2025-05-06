@@ -8,7 +8,7 @@ create table User (
     lastName varchar(255) not null,
     familyName varchar(255),
     birthday date not null,
-    username varchar(255) not null,
+    username varchar(255) not null unique,
     password varchar(255) not null,
     email varchar(255) not null unique,
     constraint ch_password_length check (char_length(password) >= 8)
@@ -49,9 +49,8 @@ create table Difficulty (
 );
 
 create table Puzzle (
-    id int primary key auto_increment,
+    id int primary key,
     name varchar(255) not null,
-    description varchar(255),
     authorId int not null,
     difficultyId int not null,
     dateCreated datetime default current_timestamp,
@@ -125,9 +124,9 @@ insert into Player
 values(1,1,1,1),
 (2,1,1,1);
 
-insert into Puzzle (name, authorId, difficultyId)
-values ('Roba d\'estiu', 2, 1),
-('Animals del desert', 2, 3);
+insert into Puzzle (id, name, authorId, difficultyId)
+values (1, 'Roba d\'estiu', 2, 1),
+(2, 'Animals del desert', 2, 3);
 
 insert into Puzzle_Player (puzzleId, playerId, score)
 values (1, 1, 100),
@@ -302,56 +301,78 @@ values (1, 1, 1, 1),
 (1, 9, 1, 1),
 (1, 10, 1, 1);
 
+create temporary table temp (
+    word varchar(255),
+    start_pos tinyint unsigned,
+    end_pos tinyint unsigned,
+    letter varchar(1),
+    pos tinyint
+);
+
 delimiter //
 
-
 create procedure createPuzzle(
-       in id_difuculty int(11),
-       id_puzzle int(11),
-       id_author int(11),
-       description varchar(255),
-       name varchar(255),
-       word varchar(255),
-       start tinyint(3),
-       end tinyint(3),
-       letterIN varchar(255),
-       pos tinyint(4)
+    in id_difficulty int,
+    in id_author int,
+    in description varchar(255),
+    in name varchar(255)
 )
 begin
+    declare temp_word varchar(255);
+    declare temp_start tinyint unsigned;
+    declare temp_end tinyint unsigned;
 
-    declare doneWord boolean default false;
-    declare doneWPos boolean default false;
-    declare doneLetter boolean default false;
+    declare temp_letter varchar(1);
+    declare temp_pos tinyint;
 
-    declare curWord cursor for words from temp;
-    declare curWPos cursor for words from temp;
-    declare curLetter cursor for letter from temp;
+    declare word_id int;
+    declare id_puzzle int;
 
-    declare continue handler
-    for not found set doneWord = true;
-    declare continue handler
-    for not found set doneWPos = true;
-    declare continue handler
-    for not found set doneLetter = true;
+    declare done boolean default false;
 
+    declare curWord cursor for
+        select distinct word, start_pos, end_pos from temp;
 
+    declare curLetter cursor for
+        select letter, pos from temp;
+
+    declare continue handler for not found set done = true;
+
+    -- Get next puzzle ID
+    select ifnull(max(id), 0) + 1 into id_puzzle from Puzzle;
+
+    insert into Puzzle (id, name, authorId, difficultyId, description)
+    values (id_puzzle, name, id_author, id_difficulty, description);
+
+    -- Process words
+    set done = false;
     open curWord;
+    read_words: loop
+        fetch curWord into temp_word, temp_start, temp_end;
+        if done then leave read_words; end if;
 
-    insert into Word(word)
-    values (substring_index(temp.words, "-", 1));
+        if not exists (select 1 from Word where word = temp_word) then
+            insert into Word (word) values (temp_word);
+        end if;
 
+        select id into word_id from Word where word = temp_word limit 1;
 
+        insert into Puzzle_Word (puzzleId, wordId, start, end)
+        values (id_puzzle, word_id, temp_start, temp_end);
+    end loop;
+    close curWord;
 
-    insert into Letter(puzzleId, letter, pos)
-     
+    -- Process letters
+    set done = false;
+    open curLetter;
+    read_letters: loop
+        fetch curLetter into temp_letter, temp_pos;
+        if done then leave read_letters; end if;
 
+        insert into Letter (puzzleId, letter, pos)
+        values (id_puzzle, temp_letter, temp_pos);
+    end loop;
+    close curLetter;
+end //
 
-    insert into Puzzle_Word()
-
-    
-
-
-    insert into Puzzle()
-end;
 delimiter ;
-

@@ -301,7 +301,7 @@ values (1, 1, 1, 1),
 (1, 9, 1, 1),
 (1, 10, 1, 1);
 
-create temporary table temp (
+create table temp (
     word varchar(255),
     start_pos tinyint unsigned,
     end_pos tinyint unsigned,
@@ -314,7 +314,6 @@ delimiter //
 create procedure createPuzzle(
     in id_difficulty int,
     in id_author int,
-    in description varchar(255),
     in name varchar(255)
 )
 begin
@@ -331,7 +330,8 @@ begin
     declare done boolean default false;
 
     declare curWord cursor for
-        select distinct word, start_pos, end_pos from temp;
+        select distinct word, start_pos, end_pos from temp
+        where word is not null;
 
     declare curLetter cursor for
         select letter, pos from temp;
@@ -341,8 +341,8 @@ begin
     -- Get next puzzle ID
     select ifnull(max(id), 0) + 1 into id_puzzle from Puzzle;
 
-    insert into Puzzle (id, name, authorId, difficultyId, description)
-    values (id_puzzle, name, id_author, id_difficulty, description);
+    insert into Puzzle (id, name, authorId, difficultyId)
+    values (id_puzzle, name, id_author, id_difficulty);
 
     -- Process words
     set done = false;

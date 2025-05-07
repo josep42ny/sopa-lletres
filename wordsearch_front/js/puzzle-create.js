@@ -182,21 +182,21 @@ function fillPuzzle() {
 
 function handleSend() {
     let query = 'insert into temp (word, start_pos, end_pos, letter, pos) values ';
-    /*if (words.length < 10) {
+    if (words.length < 10) {
         return;
-    }*/
+    }
     console.log(words);
     for (let i = 0; i < letters.length; i++) {
         if (i < words.length) {
-            query += `(${words[i].word}, ${words[i].coords[0]}, ${words[i].coords[words[i].coords.length - 1]}),`;
+            query += `('${words[i].word}', ${words[i].coords[0]}, ${words[i].coords[words[i].coords.length - 1]},`;
         } else {
             query += `(null, null, null,`;
         }
-        query += ` ${letters[i].value}, ${i}),`;
+        query += ` '${letters[i].value}', ${i}),`;
     }
-    query = query.replace(/.$/, '; ')
-    query += `call createPuzzle(${document.querySelector('input[name="difficulty"]:checked').value}, ${localStorage.getItem('aid')}, ${document.querySelector('#puzzleName').value})`;
+    query = query.replace(/.$/, ';')
+    const proc = `call createPuzzle(${document.querySelector('input[name="difficulty"]:checked').value}, ${localStorage.getItem('aid')}, '${document.querySelector('#puzzleName').value}');`;
 
     console.log(query);
-    modify(query);
+    modify(query).then(modify(proc));
 }

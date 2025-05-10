@@ -9,7 +9,6 @@ form textarea {
 }
 
 form input:not([type="radio"], [type="checkbox"]),
-form button,
 form textarea,
 form select {
     height: 3em;

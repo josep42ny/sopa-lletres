@@ -3,7 +3,7 @@ import { select } from "./functions.js";
 const validChars = "abcdefghijklmnopqrstuvwxyzç"
 const letters = [...document.querySelectorAll('.letter')];
 const wordList = document.querySelector('#wordList');
-const board = document.querySelector('.game-board');
+const board = document.querySelector('.add-game-board');
 let selecting = false;
 let inserted = false;
 let fisrtMark;
@@ -92,7 +92,7 @@ function handleMouseover(element) {
 function drawWordList() {
     let html = '';
     for (const [index, word] of words.entries()) {
-        html += `<li><button type="button" class="delete" value="${index}">X</button> ${word.word}</li>`
+        html += `<div><button type="button" class="delete" value="${index}">X</button> ${word.word}</div>`;
     }
     wordList.innerHTML = html;
 }

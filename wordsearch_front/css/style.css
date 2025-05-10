@@ -80,18 +80,12 @@ article div {
 
 /* ======= Botons generics ======= */
 button {
-    background-color: var(--highlight-color);
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    padding: 0.5rem 2rem;
-    font-weight: 700;
-    box-shadow: 0 3px var(--border-color);
-    margin-bottom: 1em;
-}
-
-button:active {
-    translate: 0 3px;
-    box-shadow: 0px 0px var(--border-color);
+    padding: 0.5em 1.5em;
+    color: var(--tx-light);
+    background-color: var(--bg-dark);
+    border-radius: 0.25em;
+    border: 0;
+    cursor: pointer;
 }
 
 button.plain {
@@ -133,6 +127,7 @@ button.discrete {
     height: 2em;
     padding: 0 0.5em;
     background-color: #ffffff;
+    color: var(--tx-dark);
 }
 
 input.discrete {
@@ -140,7 +135,41 @@ input.discrete {
     padding: 0 0.5em;
 }
 
-/* ======= Taules de sopes ======= */
+/* ======= Crear sopes ======= */
+.add-game-board-wrapper {
+    width: fit-content;
+}
+
+.add-game-board {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(10%, max-content));
+    grid-template-rows: repeat(10, minmax(10%, max-content));
+    justify-items: center;
+    align-items: center;
+    font-family: 'Fira Mono', sans-serif;
+    font-weight: 600;
+}
+
+.add-game-board>input {
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid var(--bd-gray);
+}
+
+.word-list {
+    background-color: var(--bg-light);
+}
+
+#wordList {
+    display: grid;
+    padding: 1em;
+    margin-bottom: 1em;
+    gap: 0.125em;
+    grid-template-rows: repeat(10, 2em);
+}
+
+/* ======= Jugar sopes ======= */
 .content:has(> .game-board-wrapper) {
     display: flex;
     justify-content: center;
@@ -406,8 +435,39 @@ input.cell-end {
     background-color: green;
 }
 
+/* ======= Flexs ======= */
+.flex-horizontal {
+    display: flex;
+    gap: 1em;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.flex-between {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.flex-vertical-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ======= Grids ======= */
+.test {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    width: 50vw;
+    gap: 1em;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -470,6 +530,8 @@ input.cell-end {
 }
 
 @media (min-width: 620px) {
+
+    .add-game-board-wrapper,
     .game-board-wrapper {
         font-size: 1.8rem;
     }

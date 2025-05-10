@@ -95,18 +95,28 @@
     <!-- ======= Contingut principal ======= -->
     <main>
 
-        <section>
+        <section class="divider">
+            <div class="content">
+                <h1>Crea una sopa</h1>
+                <label for="nom-sopa">Nom del puzle</label>
+                <input required type="text" id="nom-sopa" name="nom-sopa">
+                <div id="difficulty"></div>
+            </div>
+        </section>
+
+        <section class="divider">
+            <div class="content game-bar">
+                <button id="submit" class="discrete">Desa</button>
+                <a href="user-help.html"><img src="../../media/image/help.svg" alt="help" width="24"></a>
+            </div>
+        </section>
+
+        <section class="orange">
             <div class="content space-top-xl">
-                <h1 class="space-md">Crea una sopa de lletres</h1>
-                <div class="grid">
-                    <div class="grid-full">
-                        <label for="nom-sopa">Nom del puzle</label>
-                        <input required type="text" id="nom-sopa" name="nom-sopa">
-                        <div id="difficulty"></div>
-                    </div>
-                    <div class="grid-8 grid-center">
-                        <div class="game-board-wrapper space-xl">
-                            <div class="game-board">
+                <div class="test">
+                    <div class="flex-vertical-center">
+                        <div class="add-game-board-wrapper space-md">
+                            <div class="add-game-board">
                                 <input type="text" maxlength="1" class="letter">
                                 <input type="text" maxlength="1" class="letter">
                                 <input type="text" maxlength="1" class="letter">
@@ -210,21 +220,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid-4">
-                        <ul id="wordList"></ul>
-                    </div>
-                    <div class="grid-8 puzzle-create-buttons">
-                        <div>
-                            <button type="button" id="fillPuzzle" class="discrete"><img
-                                    src="../../media/image/fill-bucket.svg" alt="emplena" width="16"></button>
-                            <button type="button" id="resetPuzzle" class="discrete"><img
-                                    src="../../media/image/trashcan.svg" alt="reinicia" width="16"></button>
-                            <button id="submit" class="discrete">Desa</button>
+                    <div>
+                        <div class="word-list">
+                            <div id="wordList">
+                            </div>
                         </div>
-                        <div>
-                            <input required type="text" id="wordInput" name="word" class="discrete"
-                                placeholder="paraula nova">
-                            <button type="button" id="wordAdd" class="discrete">Inserir</button>
+                        <div class="flex-between">
+                            <div class="flex-horizontal">
+                                <button type="button" id="fillPuzzle" class="discrete"><img
+                                        src="../../media/image/fill-bucket.svg" alt="emplena" width="16"></button>
+                                <button type="button" id="resetPuzzle" class="discrete"><img
+                                        src="../../media/image/trashcan.svg" alt="reinicia" width="16"></button>
+                            </div>
+                            <div class="flex-horizontal">
+                                <input required type="text" id="wordInput" name="word" class="discrete"
+                                    placeholder="paraula nova">
+                                <button type="button" id="wordAdd" class="discrete">Inserir</button>
+                            </div>
                         </div>
                     </div>
                 </div>

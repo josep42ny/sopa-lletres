@@ -113,10 +113,16 @@
 
         <section class="orange">
             <div class="content space-top-xl">
-                <div class="test">
-                    <div class="flex-vertical-center">
-                        <div class="add-game-board-wrapper space-md">
-                            <div class="add-game-board">
+                <h1 class="space-md">Crea una sopa de lletres</h1>
+                <div class="grid">
+                    <div class="grid-full">
+                        <label for="nom-sopa">Nom del puzle</label>
+                        <input required type="text" id="puzzleName" name="nom-sopa">
+                        <div id="difficulty"></div>
+                    </div>
+                    <div class="grid-8 grid-center">
+                        <div class="game-board-wrapper space-xl">
+                            <div class="game-board">
                                 <input type="text" maxlength="1" class="letter">
                                 <input type="text" maxlength="1" class="letter">
                                 <input type="text" maxlength="1" class="letter">

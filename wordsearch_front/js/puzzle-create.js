@@ -1,4 +1,4 @@
-import { select } from "./functions.js";
+import { modify, select } from "./functions.js";
 
 const validChars = "abcdefghijklmnopqrstuvwxyzç"
 const letters = [...document.querySelectorAll('.letter')];
@@ -158,7 +158,7 @@ select('select id, difficulty from Difficulty')
     .then(rows => {
         let html = '';
         for (const row of rows) {
-            html += `<label><input required type="radio" name="dificultat" value="${row['id']}"> ${row['difficulty']}</label>`;
+            html += `<label><input required type="radio" name="difficulty" value="${row['id']}"> ${row['difficulty']}</label>`;
         }
         document.querySelector('#difficulty').innerHTML = html;
     });
@@ -181,11 +181,22 @@ function fillPuzzle() {
 }
 
 function handleSend() {
-    let query = '';
+    let query = 'insert into temp (word, start_pos, end_pos, letter, pos) values ';
     if (words.length < 10) {
         return;
     }
-    for (const word of words) {
-        query += `(${word.word}, ${word.coords[0]}, ${word.coords[word.coords.length]})`;
+    console.log(words);
+    for (let i = 0; i < letters.length; i++) {
+        if (i < words.length) {
+            query += `('${words[i].word}', ${words[i].coords[0]}, ${words[i].coords[words[i].coords.length - 1]},`;
+        } else {
+            query += `(null, null, null,`;
+        }
+        query += ` '${letters[i].value}', ${i}),`;
     }
+    query = query.replace(/.$/, ';')
+    const proc = `call createPuzzle(${document.querySelector('input[name="difficulty"]:checked').value}, ${localStorage.getItem('aid')}, '${document.querySelector('#puzzleName').value}');`;
+
+    console.log(query);
+    modify(query).then(modify(proc));
 }

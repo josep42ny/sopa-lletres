@@ -3,7 +3,7 @@ import { modify, select } from "./functions.js";
 const validChars = "abcdefghijklmnopqrstuvwxyzç"
 const letters = [...document.querySelectorAll('.letter')];
 const wordList = document.querySelector('#wordList');
-const board = document.querySelector('.add-game-board');
+const board = document.querySelector('#gameBoard');
 let selecting = false;
 let inserted = false;
 let fisrtMark;

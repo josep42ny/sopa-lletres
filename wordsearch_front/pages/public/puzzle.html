@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Toni Riera & Josep Fortuny">
     <meta name="description" content="Sopa de lletres">
-    <link rel="stylesheet" href="../../css/style.css">
     <title>Sopa de lletres</title>
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <script src="../../js/check-user.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
     <script type="module" src="../../js/sidebar-user.js" defer></script>
+    <script type="module" src="../../js/puzzle-play.js" defer></script>
 </head>
 
 <body>
@@ -122,7 +123,7 @@
         <section class="orange">
             <div class="content space-top-xl">
                 <div class="game-board-wrapper">
-                    <div class="game-board">
+                    <div id="gameBoard" class="game-board">
                         <div>G</div>
                         <div>J</div>
                         <div>X</div>
@@ -231,7 +232,7 @@
 
         <section class="orange">
             <div class="content space-xl">
-                <div id="game-words">
+                <div id="gameWords">
                     <div>Paraula1</div>
                     <div>Paraula2</div>
                     <div>Paraula3</div>

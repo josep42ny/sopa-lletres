@@ -490,6 +490,14 @@ input.cell-end {
     grid-column: span 8;
 }
 
+.grid-7 {
+    grid-column: span 7;
+}
+
+.grid-5 {
+    grid-column: span 5;
+}
+
 .grid-4 {
     grid-column: span 4;
 }

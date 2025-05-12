@@ -182,9 +182,9 @@ function fillPuzzle() {
 
 function handleSend() {
     let query = 'insert into temp (word, start_pos, end_pos, letter, pos) values ';
-    if (words.length < 10) {
+    /*if (words.length < 10) {
         return;
-    }
+    }*/
     console.log(words);
     for (let i = 0; i < letters.length; i++) {
         if (i < words.length) {
@@ -197,6 +197,6 @@ function handleSend() {
     query = query.replace(/.$/, ';')
     const proc = `call createPuzzle(${document.querySelector('input[name="difficulty"]:checked').value}, ${localStorage.getItem('aid')}, '${document.querySelector('#puzzleName').value}');`;
 
-    console.log(query);
+    console.log(words);
     modify(query).then(modify(proc));
 }

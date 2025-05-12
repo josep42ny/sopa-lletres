@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Toni Riera & Josep Fortuny">
     <meta name="description" content="Sopa de lletres">
-    <link rel="stylesheet" href="../../css/style.css">
     <title>Pagina extra</title>
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/style.css">
     <script type="module" src="../../js/sidebar-user.js" defer></script>
+    <script type="module" src="../../js/puzzle-select.js" defer></script>
 </head>
 
 <body>
@@ -104,12 +105,8 @@
                 <img id="brain" src="/media/image/brain.svg" alt="brain">
                 <form action="puzzle.html" method="get">
                     <h1 class="center space-md space-md-top">Sel·lecciona una sopa</h1>
-                    <select name="puzzle" id="puzzle">
-                        <option value="1">Puzzle01</option>
-                        <option value="2">Puzzle02</option>
-                        <option value="3">Puzzle03</option>
-                        <option value="4">Puzzle04</option>
-                        <option value="5">Puzzle05</option>
+                    <select id="puzzleSelect" name="puzzle">
+                        <option value="" disabled>No s'han trobat sopes</option>
                     </select>
                     <button type="submit">Jugar sopa</button>
                 </form>

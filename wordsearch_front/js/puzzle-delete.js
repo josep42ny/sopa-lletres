@@ -1,5 +1,8 @@
 import { select, modify } from './functions.js';
 
+const form = document.querySelector('#puzzleDelete');
+const radio = document.querySelector('#puzzleRadio');
+
 updatePuzzles();
 function updatePuzzles() {
     select(`
@@ -15,13 +18,11 @@ function updatePuzzles() {
                 html += `<label>${puzzle.name} <input type="checkbox" name="puzzles" value="${puzzle.id}"></label>`;
             }
         }
-        html += '<button type="submit">Elimina</button>';
-        const form = document.querySelector('#puzzleDelete');
-        form.innerHTML = html;
+        radio.innerHTML = html;
     });
 }
 
-document.querySelector('#puzzleDelete').addEventListener('submit', e => {
+form.addEventListener('submit', e => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const puzzleIds = formData.getAll('puzzles');

@@ -99,11 +99,14 @@ function handleVictory() {
     boardElem.removeEventListener('mousedown', handleMousedown);
     boardElem.removeEventListener('mouseup', handleMouseup);
 
-    let uid = localStorage.getItem('uid');
-    if (uid === null) { return; }
+    const secconds = Math.round((Date.now() - timeStart) / 1000);
+    const score = Math.max(0, Math.round((60 - secconds) * difficulty));
+    const minutes = Math.floor((secconds % (60 * 60)) / 60);
+    console.log("🚀 ~ handleVictory ~ i:", score)
+    alert(`Has acabat en ${minutes} minuts i ${secconds} segons amb una puntuació de ${score} punts`);
 
-    let secconds = (Date.now() - timeStart) / 1000;
-    let score = Math.max(0, Math.round((60 - secconds) * difficulty));
+    const uid = localStorage.getItem('uid');
+    if (uid === null) { return; }
 
     let query = `
         insert into Puzzle_Player (puzzleId, playerId, score)
@@ -116,6 +119,7 @@ function handleVictory() {
 }
 
 setInterval(_ => {
+    if (wordsDiscovered.length >= 10) return;
     let now = new Date().getTime();
     let elapsed = now - timeStart;
 

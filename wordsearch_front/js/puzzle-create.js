@@ -6,7 +6,7 @@ const wordList = document.querySelector('#wordList');
 const board = document.querySelector('#gameBoard');
 let selecting = false;
 let inserted = false;
-let fisrtMark;
+let firstMark;
 const word = {
     word: '',
     coords: [],
@@ -55,7 +55,7 @@ function handleMousedown(element) {
     selecting = true;
     for (let i = 0; i < letters.length; i++) {
         if (letters[i] === element.target) {
-            fisrtMark = i;
+            firstMark = i;
         }
     }
 };
@@ -71,8 +71,8 @@ function handleMouseover(element) {
         }
     }
 
-    let yDifference = (Math.floor(hoveringLetter / 10)) - (Math.floor(fisrtMark / 10));
-    let xDifference = (Math.floor(hoveringLetter % 10)) - (Math.floor(fisrtMark % 10));
+    let yDifference = (Math.floor(hoveringLetter / 10)) - (Math.floor(firstMark / 10));
+    let xDifference = (Math.floor(hoveringLetter % 10)) - (Math.floor(firstMark % 10));
     let yOffset = Math.min(Math.max(yDifference, -1), 1);
     let xOffset = Math.min(Math.max(xDifference, -1), 1);
 
@@ -114,7 +114,7 @@ function fillWord(yOffset, xOffset) {
     }
     newWord.coords = [];
     let offset = xOffset + yOffset * 10;
-    let end = fisrtMark;
+    let end = firstMark;
     for (let i = 0; i < newWord.word.length; i++) {
         newWord.coords.push(end);
         end += offset;
@@ -144,7 +144,7 @@ function clearWord(yOffset, xOffset) {
     }
 
     let change = xOffset + yOffset * 10;
-    let cur = fisrtMark;
+    let cur = firstMark;
     for (let i = 0; i < newWord.word.length; i++) {
         letters[cur].classList.remove('cell-highlighted');
         letters[cur].value = '';

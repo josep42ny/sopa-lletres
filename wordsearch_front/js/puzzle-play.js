@@ -6,6 +6,8 @@ const wordsElem = document.querySelector("#gameWords");
 const words = [];
 let selected = [];
 let startTarget;
+let difficulty;
+let timeStart;
 
 select(`
         select letter
@@ -38,6 +40,19 @@ select(`
         wordsElem.innerHTML = wordHtml;
     });
 
+select(`
+        select name, difficulty, weight
+        from Puzzle, Difficulty
+        where Puzzle.id = ${puzzleId}
+        and difficultyId = Difficulty.id;
+        `)
+    .then(data => {
+        document.querySelector('#puzzleName').textContent = data[0].name;
+        document.querySelector('#puzzleDifficulty').textContent = 'DIFICULTAT ' + data[0].difficulty.toUpperCase();
+        difficulty = data[0].weight;
+        timeStart = Date.now();
+    });
+
 document.querySelector('#gameBoard').addEventListener('mousedown', handleMousedown);
 document.querySelector('#gameBoard').addEventListener('mouseup', handleMouseup);
 
@@ -52,6 +67,7 @@ function handleMousedown(e) {
 
 function handleMouseup(e) {
     let target = e.target.getAttribute('value');
+    handleVictory();
     if (target === startTarget) { return; }
     for (let word of selected) {
         if (target == word.start || target == word.end) {
@@ -59,10 +75,19 @@ function handleMouseup(e) {
         }
     }
 
-    // todo: asd
-    if (won()) {
-        handleVictory();
-    }
+    //if (won()) {
+    handleVictory();
+    //}
 
     selected = [];
+}
+
+function won() {
+    return words.length <= 0 ? true : false;
+}
+
+function handleVictory() {
+    let secconds = (Date.now() - timeStart) / 1000;
+    console.log(Math.max(0, Math.round((60 - secconds) * difficulty)));
+
 }

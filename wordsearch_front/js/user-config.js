@@ -26,3 +26,15 @@ select(`select * from Color;`).then(colors => {
     document.querySelector('#theme').innerHTML = colorHtml;
     document.querySelector('#backgroundTheme').innerHTML = colorHtml;
 });
+
+select(`select Color.hex from Color, Player where Color.id = Player.tableColorId`).then(table => {
+    for (const [key, value] of Color.hex(colores)) {
+        document.documentElement.style.setProperty(`--bg-color:`, value);
+    }
+});
+
+select(`select Color.hex from Color, Player where Color.id = Player.buttonColorId`).then(button => {
+    for (const [key, value] of Color.hex(colores)) {
+        document.documentElement.style.setProperty(`--bt-dark:`, value);
+    }
+});

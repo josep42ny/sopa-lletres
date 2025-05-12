@@ -82,7 +82,7 @@ article div {
 button {
     padding: 0.5em 1.5em;
     color: var(--tx-light);
-    background-color: var(--bg-dark);
+    background-color: var(--bt-dark);
     border-radius: 0.25em;
     border: 0;
     cursor: pointer;
@@ -126,7 +126,7 @@ button.discrete {
     justify-content: center;
     height: 2em;
     padding: 0 0.5em;
-    background-color: #ffffff;
+    background-color: var(--bt-light);
     color: var(--tx-dark);
 }
 

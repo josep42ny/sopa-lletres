@@ -114,9 +114,9 @@ values (1, 'Català'),
 (5, 'Castellano');
 
 insert into Difficulty (id, difficulty, weight)
-values (1, 'Fàcil', 0.5),
-(2, 'Mitja', 1.0),
-(3, 'Difícil', 1.5);
+values (1, 'Fàcil', 1),
+(2, 'Mitja', 1.2),
+(3, 'Difícil', 1.3);
 
 insert into Admin values(2);
 

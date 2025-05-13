@@ -32,9 +32,9 @@ create table Language (
 
 create table Player (
     id int primary key,
-    tableColorId int,
-    buttonColorId int,
-    languageId int,
+    tableColorId int default 1,
+    buttonColorId int default 1,
+    languageId int default 1,
     constraint fk_player_user foreign key (id) references User(id)
     on delete cascade,
     constraint fk_player_tableColor foreign key (tableColorId) references Color(id),

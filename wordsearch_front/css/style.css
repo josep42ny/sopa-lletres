@@ -421,7 +421,7 @@ section.full-center {
     color: hsl(0, 50%, 40%);
 }
 
-input.cell-highlighted {
+.cell-highlighted {
     background-color: var(--bg-highlight-dim);
     border: 1px solid var(--bd-gray);
     color: var(--tx-dark);

@@ -102,9 +102,9 @@ values (1, 'Josep', 'Fortuny', 'Ferreiro', '1919-11-7', 'josep42ny', '123456567'
 (2, "Toni", "Riera", "Colomar", "2004-08-13", "Trc300online", "123456789", "Triera265@alumnes.politecnicllevant.cat");
 
 insert into Color (id, hex, name)
-values (1, '#000000', 'Black'),
-(2, '#ff0000', 'Red'),
-(3, '#ffffff', 'White');
+values (1, '#fffffe', 'Default'),
+(2, '#f8c379', 'Taronja'),
+(3, '#005a70', 'Blau');
 
 insert into Language (id, name)
 values (1, 'Català'),

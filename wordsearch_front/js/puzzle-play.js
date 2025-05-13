@@ -15,6 +15,24 @@ let timeStart;
 boardElem.addEventListener('mousedown', handleMousedown);
 boardElem.addEventListener('mouseup', handleMouseup);
 
+let uid = localStorage.getItem('uid');
+if (uid !== null) {
+    select(`
+        select Color.hex
+        from Color, Player
+        where Player.id = ${uid}
+        and Player.tableColorId = Color.id
+        union ALL
+		select Color.hex
+        from Color, Player
+        where Player.id = ${uid}
+        and Player.buttonColorId = Color.id;
+        `).then(data => {
+        document.documentElement.style.setProperty(`--bg-color`, data[0].hex);
+        document.documentElement.style.setProperty(`--bt-dark`, data[1].hex);
+    });
+}
+
 select(`select letter
         from Letter
         where Letter.puzzleId = ${puzzleId};`)

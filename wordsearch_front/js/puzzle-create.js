@@ -124,9 +124,8 @@ function fillPuzzle() {
 
 function handleSubmit() {
     let query = 'insert into temp (word, start_pos, end_pos, letter, pos) values ';
-    /*if (words.length < 10) {
-        return;
-    }*/
+    if (words.length < 10) { return; }
+
     for (let i = 0; i < lettersElem.length; i++) {
         if (i < words.length) {
             query += `('${words[i].word}', ${words[i].coords[0]}, ${words[i].coords[words[i].coords.length - 1]},`;
